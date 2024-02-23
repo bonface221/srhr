@@ -1,3 +1,4 @@
+import { contactsData, marginX } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -9,28 +10,8 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 import Image from "next/image";
 import { mainNavData } from "../navbar/main-nav";
-import { marginX } from "@/utils/constants";
-import LocationIcon from "@/utils/icons/LocationIcon";
-import MailIcon from "@/utils/icons/MailIcon";
-import PhoneIcon from "@/utils/icons/PhoneIcon";
-
-const contactsData = [
-  {
-    icon: LocationIcon,
-    text: "Southgate Residence, Plainsview, Likoni Road",
-  },
-  {
-    icon: MailIcon,
-    text: "info@srhralliance.or.ke",
-  },
-  {
-    icon: PhoneIcon,
-    text: "+254 20 2398723",
-  },
-];
 
 const Footer = () => {
   return (

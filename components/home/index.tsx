@@ -7,6 +7,7 @@ import OurServices from "./our-services";
 import Stats from "./stats";
 import dynamic from "next/dynamic";
 import LatestNews from "../common/latest-news";
+import Donors from "./donors";
 
 const SRHRAllianceOnYoutube = dynamic(
   () => import("./srhr-alliance-on-youtube")
@@ -22,6 +23,7 @@ const Landing = () => {
       <SRHRAllianceOnYoutube />
       <Stats />
       <LatestNews />
+      <Donors />
     </>
   );
 };
