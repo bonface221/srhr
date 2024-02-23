@@ -1,9 +1,10 @@
 import { marginX } from "@/utils/constants";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const mainNavData = [
+export const mainNavData = [
   {
     label: "Home",
     link: "/",
@@ -113,6 +114,10 @@ const mainNavData = [
       },
     ],
   },
+  {
+    label: "Contact Us",
+    link: "/contact-us",
+  },
 ];
 
 const MainNav = () => {
@@ -127,9 +132,11 @@ const MainNav = () => {
         />
         <Flex gap={4}>
           {mainNavData.map((item, i) => (
-            <Text key={i} fontWeight="500" fontSize="lg" color="brand.main">
-              {item.label}
-            </Text>
+            <Link key={i} href={item.link ? item.link : "/"}>
+              <Text fontWeight="500" fontSize="lg" color="brand.main">
+                {item.label}
+              </Text>
+            </Link>
           ))}
         </Flex>
         <Button bg="brand.main" color="brand.white">
