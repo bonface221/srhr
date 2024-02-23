@@ -18,12 +18,19 @@ const Footer = () => {
     <Box bg="brand.main" py="4rem">
       <Grid
         marginX={marginX}
-        templateColumns={{ base: "1fr", md: "repeat(7,1fr)" }}
-        gap={4}
+        templateColumns={{
+          base: "repeat(2,1fr)",
+          lg: "repeat(7,1fr)",
+        }}
+        gap={{ base: 7, lg: 6 }}
         color="brand.white"
         px="1rem"
       >
-        <GridItem>
+        <GridItem
+          colSpan={{ base: 2, lg: "auto" }}
+          display="flex"
+          justifyContent={{ base: "center", sm: "normal" }}
+        >
           <Image
             src="/logo.png"
             alt="SRHR Alliance in Kenya"
@@ -47,7 +54,12 @@ const Footer = () => {
           <Text>Youtube</Text>
           <Text>Facebook</Text>
         </GridItem>
-        <GridItem display="flex" flexDir="column" gap={2} colSpan={2}>
+        <GridItem
+          display="flex"
+          flexDir="column"
+          gap={2}
+          colSpan={{ base: 2, lg: 2 }}
+        >
           <Heading as="h3" size="md">
             Contact Us
           </Heading>
@@ -58,7 +70,12 @@ const Footer = () => {
             </Flex>
           ))}
         </GridItem>
-        <GridItem display="flex" flexDir="column" gap={2} colSpan={2}>
+        <GridItem
+          display="flex"
+          flexDir="column"
+          gap={2}
+          colSpan={{ base: 2, lg: 2 }}
+        >
           <Heading as="h3" size="md">
             Subscribe for updates
           </Heading>
