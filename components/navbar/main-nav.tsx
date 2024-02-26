@@ -20,7 +20,7 @@ const MainNav = () => {
             <MenuDropdown key={i} menuItem={item} />
           ))}
         </Flex>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <Button
             display={{ base: "none", lg: "block" }}
             bg="brand.main"
