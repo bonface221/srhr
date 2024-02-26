@@ -45,10 +45,20 @@ const socials = [
 const TopNav = () => {
   return (
     <Box bg="brand.main" py=".6rem">
-      <Flex marginX={marginX} justify="space-between" align="center">
-        <Flex gap={3}>
+      <Flex
+        marginX={marginX}
+        justify="space-between"
+        flexWrap="wrap"
+        align="center"
+      >
+        <Flex gap={3} flexDir={{ base: "column", sm: "row" }}>
           {topNavData.map((item, i) => (
-            <Flex key={i} align="center" gap={1}>
+            <Flex
+              key={i}
+              display={i == 2 ? { base: "none", lg: "flex" } : "flex"}
+              align="center"
+              gap={1}
+            >
               <Box as={item.icon} color="brand.white" />
 
               <Text fontSize="md" color="brand.white">

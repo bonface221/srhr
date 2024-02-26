@@ -1,4 +1,4 @@
-import { contactsData, marginX } from "@/utils/constants";
+import { contactsData, marginX, navData } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -11,7 +11,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { mainNavData } from "../navbar/main-nav";
 
 const Footer = () => {
   return (
@@ -42,7 +41,7 @@ const Footer = () => {
           <Heading as="h3" size="md">
             Quick Links
           </Heading>
-          {mainNavData.map((item, i) => (
+          {navData.map((item, i) => (
             <Text key={i}>{item.label}</Text>
           ))}
         </GridItem>

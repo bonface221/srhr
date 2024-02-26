@@ -36,7 +36,11 @@ const ABitAboutUs = () => {
           />
         </Box>
         <Stack gap={6}>
-          <Heading color="brand.main">
+          <Heading
+            color="brand.main"
+            fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+            textAlign={{ base: "center", sm: "left" }}
+          >
             Sexual Reproductive Health and Rights Alliance Kenya
           </Heading>
           <Text fontSize="lg">
@@ -49,6 +53,7 @@ const ABitAboutUs = () => {
             Anglican Development Services (ADS) Nyanza,
           </Text>
           <Button
+            alignSelf={{ base: "center", sm: "flex-start" }}
             bg="brand.red"
             w="fit-content"
             color="brand.white"

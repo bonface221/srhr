@@ -45,7 +45,7 @@ const OurMission = () => {
       bgPos="50% 40%"
       bgRepeat="no-repeat"
     >
-      <Stack justify="center" minH="65vh" marginX={marginX}>
+      <Stack justify="center" minH="65vh" py="3rem" marginX={marginX}>
         <MainHeading text="Our Mission & Vision" color="white" />
         <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} mt="2rem">
           {ourMissionCardsData.map((d, i) => (

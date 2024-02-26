@@ -27,7 +27,7 @@ const ourStatsData = [
 const Stats = () => {
   return (
     <Box bgImage="/our-impact-img.jpg">
-      <Stack minH="65vh" marginX={marginX} justify="center">
+      <Stack minH="65vh" marginX={marginX} justify="center" py="3rem">
         <MainHeading text="Our Impact" color="white" />
 
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} mt="2rem">

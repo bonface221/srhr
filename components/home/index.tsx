@@ -14,7 +14,6 @@ const SRHRAllianceOnYoutube = dynamic(
 );
 
 const Landing = () => {
-  return null;
   return (
     <>
       <Hero />

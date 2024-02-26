@@ -28,7 +28,7 @@ const MainHeading = ({
       }}
     >
       <Heading
-        fontSize="2xl"
+        fontSize={{ base: "xl", sm: "2xl" }}
         flexShrink={0}
         lineHeight={1}
         fontWeight={600}
