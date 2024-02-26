@@ -9,12 +9,15 @@ const MainNav = () => {
   return (
     <Box bg="brand.white" py=".5rem">
       <Flex justify="space-between" align="center" marginX={marginX}>
-        <Image
-          src="/logo.png"
-          alt="Kenya SRHR Alliance"
-          width={100}
-          height={100}
-        />
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="Kenya SRHR Alliance"
+            width={100}
+            height={100}
+          />
+        </Link>
+
         <Flex gap={4} display={{ base: "none", lg: "flex" }}>
           {navData.map((item, i) => (
             <MenuDropdown key={i} menuItem={item} />

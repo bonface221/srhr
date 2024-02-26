@@ -1,0 +1,49 @@
+/*
+
+css={{
+        "&:before": {
+          content: '""',
+          position: "absolute",
+          top: "-40px",
+          left: "auto",
+          right: 0,
+          width: "129px",
+          height: "375px",
+          opacity: ".23",
+          borderRadius: "20px",
+          clipPath:
+            'path("M0 15.5333C0 4.82085 10.9053 -2.43862 20.7881 1.69505L116.718 41.8194C124.157 44.9312 129 52.2064 129 60.2705V368L4.71313 220.673C1.66949 217.065 0 212.497 0 207.777V15.5333Z")',
+          zIndex: -1,
+          transition: "all .4s ease-in-out",
+        },
+      }}
+
+
+*/
+.team-card {
+  position: relative;
+
+  &:hover {
+    &:before {
+      background-color: var(--chakra-colors-brand-main);
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: auto;
+    right: 0;
+    width: 129px;
+    height: 375px;
+    opacity: 0.23;
+    border-radius: 20px;
+    background-color: var(--chakra-colors-brand-main);
+    clip-path: path(
+      "M0 15.5333C0 4.82085 10.9053 -2.43862 20.7881 1.69505L116.718 41.8194C124.157 44.9312 129 52.2064 129 60.2705V368L4.71313 220.673C1.66949 217.065 0 212.497 0 207.777V15.5333Z"
+    );
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+  }
+}
