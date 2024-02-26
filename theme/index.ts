@@ -7,6 +7,7 @@ export const theme = extendTheme({
       red: "#E41E26",
       black: "#000000",
       white: "#FFFF",
+      gray: "#F3F3F3",
     },
   },
 });
