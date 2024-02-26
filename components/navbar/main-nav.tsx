@@ -1,10 +1,9 @@
 import { marginX, navData } from "@/utils/constants";
-import MenuIcon from "@/utils/icons/MenuIcon";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import MobileNav from "./mobile-nav";
+import MenuDropdown from "./menu-dropdown";
 
 const MainNav = () => {
   return (
@@ -18,20 +17,22 @@ const MainNav = () => {
         />
         <Flex gap={4} display={{ base: "none", lg: "flex" }}>
           {navData.map((item, i) => (
-            <Link key={i} href={item.link ? item.link : "/"}>
-              <Text fontWeight="500" fontSize="lg" color="brand.main">
-                {item.label}
-              </Text>
-            </Link>
+            <MenuDropdown key={i} menuItem={item} />
           ))}
         </Flex>
-        <Button
-          display={{ base: "none", lg: "block" }}
-          bg="brand.main"
-          color="brand.white"
-        >
-          Contact Us
-        </Button>
+        <Link href="/contact">
+          <Button
+            display={{ base: "none", lg: "block" }}
+            bg="brand.main"
+            _hover={{
+              bg: "brand.dark",
+            }}
+            color="brand.white"
+          >
+            Contact Us
+          </Button>
+        </Link>
+
         <Box display={{ base: "block", lg: "none" }}>
           <MobileNav />
         </Box>
