@@ -36,15 +36,15 @@ const TeamCard = () => {
       marginTop="40px"
       transition="all .4s ease-in-out"
     >
-      <Box height="17rem">
+      <Box height="17rem" overflow="hidden" borderRadius="20px">
         <Image
+          className="team-card__image"
           src="/team.avif"
           style={{
             objectFit: "cover",
             objectPosition: "center",
             width: "100%",
             height: "100%",
-            borderRadius: "20px",
           }}
           alt="team"
           width={150}
@@ -57,9 +57,19 @@ const TeamCard = () => {
           Bonface Maina
         </Heading>
         <Text>Executive developer</Text>
-        <Flex>
+        <Flex align="center" gap={2}>
           {socials.map((social, i) => (
-            <Box key={i} as={social.icon} boxSize="6" />
+            <Box
+              key={i}
+              as={social.icon}
+              transition="all .3s ease-in-out"
+              boxSize="4"
+              cursor="pointer"
+              color="brand.main"
+              _hover={{
+                color: "brand.red",
+              }}
+            />
           ))}
         </Flex>
       </Stack>
