@@ -20,7 +20,7 @@ const Donors = () => {
   return (
     <Stack marginX={marginX}>
       <MainHeading text="International Donors" />
-      <Box mb={10}>
+      <Box mb={10} mt="1.5rem">
         <Marquee
           className="organizations-marquee"
           autoFill={true}

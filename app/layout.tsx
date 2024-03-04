@@ -5,6 +5,7 @@ import "./globals.scss";
 import { Providers } from "./providers";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Box } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navbar />
-          {children}
-          <Footer />
+          <Box as="main" bg="rgba(33, 115, 41, 0.1)">
+            {children} <Footer />
+          </Box>
         </Providers>
       </body>
     </html>

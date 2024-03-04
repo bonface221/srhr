@@ -79,7 +79,7 @@ const Footer = () => {
             Subscribe for updates
           </Heading>
 
-          <Stack bg="rgba(112, 174, 118, 0.8)" p=".5rem">
+          <Stack borderRadius="md" bg="rgba(112, 174, 118, 0.8)" p=".5rem">
             <Input
               variant="flushed"
               placeholder="Name"

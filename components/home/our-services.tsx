@@ -25,12 +25,7 @@ const ourServicesData = [
 
 const OurServices = () => {
   return (
-    <Box
-      bgImage="/our-work-img.jpg"
-      bgSize="cover"
-      my="6rem"
-      bgRepeat="no-repeat"
-    >
+    <Box my="6rem" bgRepeat="no-repeat">
       <Stack marginX={marginX}>
         <MainHeading text="Our Services" color="red" />
         <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} mt="2rem">

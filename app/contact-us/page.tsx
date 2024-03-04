@@ -1,8 +1,13 @@
-import Contact from "@/components/contact";
-import React from "react";
+import CommonPageHero from "@/components/common/common-page-hero";
+import ContactSection from "@/components/contact/contact-section";
 
 const ContactUsPage = () => {
-  return <Contact />;
+  return (
+    <>
+      <CommonPageHero bgImg="common-page-hero-img.png" text="Contact Us" />
+      <ContactSection />
+    </>
+  );
 };
 
 export default ContactUsPage;

@@ -1,8 +1,17 @@
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import MainHeading from "./main-heading";
 import { marginX } from "@/utils/constants";
 import Image from "next/image";
+import { CommentIcon, UserIcon } from "@/utils/icons";
 
 const latestNewsData = [
   {
@@ -31,7 +40,7 @@ const LatestNews = () => {
       <MainHeading text="Latest Stories and News" />
       <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} mt="2rem">
         {latestNewsData.map((d, i) => (
-          <Stack key={i}>
+          <Stack key={i} bg="brand.white" borderRadius="xl" overflow="hidden">
             <Box h="20rem">
               <Image
                 src={d.thumbnail}
@@ -39,30 +48,28 @@ const LatestNews = () => {
                 width={500}
                 height={500}
                 style={{
-                  borderRadius: "10px",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
                 }}
               />
             </Box>
-
-            <Stack
-              bg="brand.white"
-              borderRadius="md"
-              mt="-4rem"
-              boxShadow="md"
-              w="90%"
-              p=".7rem"
-              alignSelf="center"
-              textAlign="center"
-              gap={4}
-            >
-              <Heading as="h4" fontSize="xl">
-                {d.title}
-              </Heading>
-              <Text>{d.desc}</Text>
+            <Stack gap={4} p={3} flex={1}>
+              <Flex gap={2}>
+                <Flex align="center" gap={1}>
+                  <Box as={UserIcon} color="brand.main" boxSize={5} />
+                  <Text>By Jonson</Text>
+                </Flex>
+                |
+                <Flex gap={1} align="center">
+                  <Box as={CommentIcon} boxSize={5} color="brand.main" />
+                  <Text>0 Comments</Text>
+                </Flex>
+              </Flex>
+              <Heading size="md">{d.title}</Heading>
+              <Button w="fit-content" mt="auto">
+                Read More
+              </Button>
             </Stack>
           </Stack>
         ))}
