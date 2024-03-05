@@ -1,5 +1,6 @@
 import CommonPageHero from "@/components/common/common-page-hero";
-import Partners from "@/components/partners";
+import { Partners } from "@/components/partners";
+
 import React from "react";
 
 const OurPartners = () => {

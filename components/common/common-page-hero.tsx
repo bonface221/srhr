@@ -1,4 +1,5 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { marginX } from "@/utils/constants";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 
 const CommonPageHero = ({ text, bgImg }: { text: string; bgImg: string }) => {
@@ -13,7 +14,11 @@ const CommonPageHero = ({ text, bgImg }: { text: string; bgImg: string }) => {
       bgSize="cover"
       bgRepeat="no-repeat"
     >
-      <Heading color="brand.white">{text}</Heading>
+      <Box marginX={marginX}>
+        <Heading textAlign="center" color="brand.white">
+          {text}
+        </Heading>
+      </Box>
     </Flex>
   );
 };

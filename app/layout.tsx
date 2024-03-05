@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Box } from "@chakra-ui/react";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NextTopLoader color="#336aea" />
         <Providers>
           <Navbar />
           <Box as="main" bg="rgba(33, 115, 41, 0.1)">
