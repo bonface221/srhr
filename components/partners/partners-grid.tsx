@@ -14,7 +14,7 @@ const PartnersGrid = () => {
         mt="2rem"
       >
         {partnersData.map((d, i) => (
-          <Link href={`/partners/${d.slug}`} key={i}>
+          <Link href={`/who-we-are/partners/${d.slug}`} key={i}>
             <Stack
               align="center"
               bg="brand.white"
