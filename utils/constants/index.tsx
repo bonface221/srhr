@@ -30,27 +30,27 @@ export const navData = [
     subItems: [
       {
         label: "Introduction and Background",
-        link: "/about-us",
+        link: "/who-we-are/about-us",
       },
       {
         label: "Objectives & Core Values",
-        link: "/objectives-and-core-values",
+        link: "/who-we-are/objectives-and-core-values",
       },
       {
         label: "SRHR Team",
-        link: "/srhr-team",
+        link: "/who-we-are/srhr-team",
       },
       {
         label: "Partners",
-        link: "/partners",
+        link: "/who-we-are/partners",
       },
       {
         label: "Our History",
-        link: "/srhr-history",
+        link: "/who-we-are/srhr-history",
       },
       {
         label: "OUR IMPACT",
-        link: "/our-impact",
+        link: "/who-we-are/our-impact",
       },
     ],
   },

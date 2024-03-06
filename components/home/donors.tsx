@@ -18,7 +18,7 @@ const organizations = [
 
 const Donors = () => {
   return (
-    <Stack marginX={marginX}>
+    <Stack marginX={marginX} my="4rem">
       <MainHeading text="International Donors" />
       <Box mb={10} mt="1.5rem">
         <Marquee

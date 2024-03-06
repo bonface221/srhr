@@ -17,13 +17,13 @@ const Landing = () => {
   return (
     <>
       <Hero />
+      <Donors />
+      <Stats />
       <ABitAboutUs />
       <OurMission />
       <OurServices />
-      <SRHRAllianceOnYoutube />
-      <Stats />
       <LatestNews />
-      <Donors />
+      <SRHRAllianceOnYoutube />
     </>
   );
 };

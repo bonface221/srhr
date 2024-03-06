@@ -26,7 +26,7 @@ export default function RootLayout({
         <NextTopLoader color="#336aea" />
         <Providers>
           <Navbar />
-          <Box as="main" bg="rgba(33, 115, 41, 0.1)">
+          <Box as="main" bg="rgba(33, 115, 41, 0.08)">
             {children} <Footer />
           </Box>
         </Providers>

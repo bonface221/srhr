@@ -1,4 +1,11 @@
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import MainHeading from "../common/main-heading";
 import MaleFemaleIcon from "@/utils/icons/MaleFemaleIcon";
@@ -26,7 +33,7 @@ const ourStatsData = [
 
 const Stats = () => {
   return (
-    <Box bgImage="/our-impact-img.jpg">
+    <Box bg="brand.main">
       <Stack minH="65vh" marginX={marginX} justify="center" py="3rem">
         <MainHeading text="Our Impact" color="white" />
 
@@ -35,9 +42,9 @@ const Stats = () => {
             <Stack
               key={i}
               p="1.5rem"
+              borderRadius="2xl"
               align="center"
-              border="1px solid var(--chakra-colors-brand-white)"
-              bg="rgba(33, 115, 41,0.5)"
+              bg="brand.lightMain"
             >
               <Box as={d.icon} boxSize="6rem" color="brand.white" />
               <Heading as="h6" color="brand.white">
@@ -49,6 +56,10 @@ const Stats = () => {
             </Stack>
           ))}
         </SimpleGrid>
+
+        <Button w="fit-content" alignSelf="center" mt=".7rem">
+          View More
+        </Button>
       </Stack>
     </Box>
   );
