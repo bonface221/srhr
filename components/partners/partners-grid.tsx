@@ -7,7 +7,7 @@ import Link from "next/link";
 const PartnersGrid = () => {
   return (
     <Box my="4rem" marginX={marginX}>
-      <MainHeading text="Our Partners" />
+      <MainHeading text="Our Esteemed Partners" />
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
         spacing={10}

@@ -12,6 +12,7 @@ import MaleFemaleIcon from "@/utils/icons/MaleFemaleIcon";
 import CommunityIcon from "@/utils/icons/CommunityIcon";
 import DoctorIcon from "@/utils/icons/DoctorIcon";
 import { marginX } from "@/utils/constants";
+import Link from "next/link";
 
 const ourStatsData = [
   {
@@ -56,10 +57,18 @@ const Stats = () => {
             </Stack>
           ))}
         </SimpleGrid>
-
-        <Button w="fit-content" alignSelf="center" mt=".7rem">
-          View More
-        </Button>
+        <Box alignSelf="center">
+          <Link href="/who-we-are/our-impact">
+            <Button
+              w="fit-content"
+              alignSelf="center"
+              color="brand.red"
+              mt=".7rem"
+            >
+              View More
+            </Button>{" "}
+          </Link>
+        </Box>
       </Stack>
     </Box>
   );
