@@ -32,6 +32,18 @@ const timeline = [
     content: `The membership of the Alliance grew from 5 to 8 international partners (Dance4life, Stop AIDS Now!, The International Planned Parenthood Federation (IPPF), and Child Helpline International (CHI) and from 7 to 17 local partners (Clinton Health Access Initiative (CHAI), ChildLine Kenya (CLK), Family Health Options Kenya (FHOK), Maximizing facts on AIDS (MAXFACTA), Nairobits Trust, National Empowerment Network of People Living with HIV/AIDS in Kenya (NEPHAK), UNESCO, Women Fighting AIDS in Kenya (WOFAK) and the World Starts With Me Alumni Youth Advocacy Network (WAYAN). The 17 organizations implemented a 3- year programme (2013-2015) Access, Services and Knowledge (ASK) programme again funded by the Dutch Ministry of Foreign Affairs with the aim of enhancing uptake of Sexual Reproductive Health (SRH) services among young people aged between 10-24 years, including underserved groups. The successes of these two programs combined with the need of SRHR among young people in Kenya and the implementing areas in particular, led to the implementation of the third MoFA funded program, Get Up Speak Out (GUSO) that focused on empowering young people to voice their own SRHR. 
     `,
   },
+  {
+    year: 2021,
+    content:
+      "In 2021 the Alliance secretariat joined a coalition to implement the Right Here Right Now programme under the RHRN II coalition. This was a year with so much learning for the Alliance especially since the secretariat lacked funds to coordinate the network.",
+  },
+  {
+    year: 2023,
+    content: `
+    In 2023 the Alliance transitioned from being hosted by one of its members (CSA) to having our own office space, internal systems, implementation structures, management structures and so much more. This was a year full of growth and opportunities for the Alliance secretariat!
+
+    `,
+  },
 ];
 
 const OurHistoryTimeline = () => {

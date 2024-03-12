@@ -21,7 +21,8 @@ const Landing = () => {
       <Stats />
       <ABitAboutUs />
       <OurMission />
-      <OurServices /> <SRHRAllianceOnYoutube />
+      <OurServices />
+      <SRHRAllianceOnYoutube />
       <LatestNews />
     </>
   );

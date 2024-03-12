@@ -23,7 +23,7 @@ const data = [
 const VisionAndMission = () => {
   return (
     <Stack marginX={marginX} my="4rem">
-      <MainHeading text="Vision & Mission" />
+      <MainHeading text="Our Pillars" />
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         alignItems="center"

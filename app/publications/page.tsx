@@ -5,7 +5,7 @@ import React from "react";
 const PublicationsPage = () => {
   return (
     <>
-      <CommonPageHero text="Our Publications" bgImg="" />
+      <CommonPageHero text="Our Publications & Resources" bgImg="" />
       <OurPublications />
     </>
   );

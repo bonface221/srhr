@@ -2,7 +2,6 @@ import { marginX } from "@/utils/constants";
 import FacebookIcon from "@/utils/icons/FacebookIcon";
 import InstagramIcon from "@/utils/icons/InstagramIcon";
 import LinkedinIcon from "@/utils/icons/LinkedinIcon";
-import LocationIcon from "@/utils/icons/LocationIcon";
 import MailIcon from "@/utils/icons/MailIcon";
 import PhoneIcon from "@/utils/icons/PhoneIcon";
 import XIcon from "@/utils/icons/XIcon";
@@ -14,12 +13,8 @@ const topNavData = [
     icon: MailIcon,
   },
   {
-    label: "+254 20 2398723",
+    label: " +254 769 478605",
     icon: PhoneIcon,
-  },
-  {
-    label: "Southgate Residence, Plainsview, Likoni Road",
-    icon: LocationIcon,
   },
 ];
 

@@ -19,5 +19,5 @@ export interface Programme {
   title: string;
   slug: string;
   desc: string;
-  image: string;
+  images: string[];
 }

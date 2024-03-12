@@ -5,11 +5,12 @@ import React from "react";
 const GetInvolved = () => {
   return (
     <Stack
-      h="50vh"
+      minH="50vh"
       bgImage="/people-map.jpg"
       bgPos="center center"
       pos="relative"
       align="center"
+      justify="center"
     >
       <Box
         bg="brand.lightMain"
@@ -29,10 +30,16 @@ const GetInvolved = () => {
         gap={6}
         w="70%"
       >
-        <Heading color="brand.white" fontSize="3rem" textAlign="center">
+        <Heading
+          color="brand.white"
+          fontSize={{ base: "1.8rem", md: "3rem" }}
+          textAlign="center"
+        >
           More Than 1.5M Community members and leaders engaged
         </Heading>
-        <Button w="fit-content">Get Involved</Button>
+        <Button w="fit-content" bg="brand.red" color="brand.white">
+          Get Involved
+        </Button>
       </Stack>
     </Stack>
   );

@@ -1,3 +1,4 @@
+import { marginX } from "@/utils/constants";
 import {
   Box,
   Button,
@@ -6,63 +7,79 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
-import MainHeading from "../common/main-heading";
-import { marginX } from "@/utils/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 const ABitAboutUs = () => {
   return (
-    <Box my="4rem" marginX={marginX}>
-      <MainHeading text="SRHR Alliance Kenya" />
+    <Box py={{ base: "2rem", sm: "5rem" }} bg="brand.green">
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         gap={8}
         mt="2.5rem"
+        marginX={marginX}
         alignItems="center"
       >
-        <Box>
-          <Image
-            src="/a-bit-about-us-img.jpg"
-            alt="A bit about us"
-            width={500}
-            height={500}
-            style={{
-              borderRadius: "10px",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </Box>
-        <Stack gap={6}>
-          <Heading
-            color="brand.main"
-            fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
-            textAlign={{ base: "center", sm: "left" }}
-          >
+        <Stack gap={3}>
+          <Heading fontSize={{ base: "1.7rem", md: "3rem" }} color="brand.red">
             Sexual Reproductive Health and Rights Alliance Kenya
           </Heading>
-          <Text fontSize="lg">
-            The SRHR Alliance in Kenya is a coalition of 17 civil society
-            organizations and institutions working to promote the sexual and
-            reproductive health and rights of young people and women in Africa,
-            Asia and the Europe. The alliance was first established in the
-            Netherlands in 2010. In Kenya the alliance brings together 17
-            organizations comprising of Africa Alive (AA), AMREF Health Africa,
-            Anglican Development Services (ADS) Nyanza,
-          </Text>
-          <Button
-            alignSelf={{ base: "center", sm: "flex-start" }}
-            bg="brand.red"
-            w="fit-content"
-            color="brand.white"
-            _hover={{
-              bg: "brand.main",
-            }}
+          <Box>
+            <Image
+              src="/about/a-bit-about.JPG"
+              alt="A bit about us"
+              width={500}
+              height={600}
+              style={{
+                borderRadius: "10px",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
+        </Stack>
+
+        <Stack gap={6}>
+          <Text
+            fontSize={{ base: "1.3rem", md: "1.8rem" }}
+            fontWeight="semibold"
           >
-            More About Us
-          </Button>
+            <Box as="span" color="brand.red">
+              The SRHR Alliance in Kenya
+            </Box>{" "}
+            is a coalition of 19 civil society organizations and institutions
+            working to promote the sexual and reproductive health and rights of
+            young people and women in Africa, Asia and the Europe. The alliance
+            was first established in the Netherlands in 2010. In Kenya the
+            alliance brings together 17 organizations comprising of{" "}
+            <Box as="span" color="brand.red">
+              Africa Alive (AA)
+            </Box>{" "}
+            ,{" "}
+            <Box as="span" color="brand.red">
+              AMREF Health Africa
+            </Box>
+            ,
+            <Box as="span" color="brand.red">
+              Anglican Development Services (ADS) Nyanza
+            </Box>{" "}
+            ,
+          </Text>
+          <Box alignSelf={{ base: "center", sm: "flex-start" }}>
+            <Link href="/who-we-are/about-us">
+              <Button
+                bg="brand.red"
+                w="fit-content"
+                color="brand.white"
+                _hover={{
+                  bg: "brand.main",
+                }}
+              >
+                More About Us
+              </Button>
+            </Link>
+          </Box>
         </Stack>
       </SimpleGrid>
     </Box>

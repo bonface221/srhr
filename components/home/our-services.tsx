@@ -3,6 +3,7 @@ import React from "react";
 import MainHeading from "../common/main-heading";
 import Image from "next/image";
 import { marginX } from "@/utils/constants";
+import Link from "next/link";
 
 const ourServicesData = [
   {
@@ -25,18 +26,21 @@ const ourServicesData = [
 
 const OurServices = () => {
   return (
-    <Box my="6rem" bgRepeat="no-repeat">
+    <Box py="6rem" bgRepeat="no-repeat" bg="#519372">
       <Stack marginX={marginX}>
-        <MainHeading text="Our Services" color="red" />
+        <Heading textAlign="center" color="brand.white">
+          OUR SERVICES
+        </Heading>
         <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} mt="2rem">
           {ourServicesData.map((d, i) => (
-            <Stack
-              key={i}
-              bg="rgba(33, 115, 41, 0.8)"
-              boxShadow="md"
-              borderBottomRadius="md"
-            >
-              <Box h="16rem">
+            <Stack key={i} gap={8}>
+              <Box
+                h="24rem"
+                borderRadius="5.5rem"
+                overflow="hidden"
+                border="4px solid #fff"
+                pos="relative"
+              >
                 <Image
                   src={d.img}
                   style={{
@@ -47,22 +51,42 @@ const OurServices = () => {
                   }}
                   alt={d.title}
                   width={500}
-                  height={500}
+                  height={600}
                 />
-              </Box>
-              <Stack p=".5rem" gap={4} pb="1rem" align="center">
-                <Heading as="h4" fontSize="2xl" color="brand.white">
-                  {d.title}
-                </Heading>
+
                 <Button
-                  bg="brand.red"
-                  w="fit-content"
-                  color="brand.white"
-                  size="sm"
+                  borderRadius="20px"
+                  boxShadow="md"
+                  pos="absolute"
+                  bottom={6}
+                  left="50%"
+                  transform="translate(-50%,0)"
+                  bg="brand.white"
+                  color="brand.red"
                 >
-                  Learn more {">"}
+                  {d.title}
                 </Button>
-              </Stack>
+              </Box>
+              <Link
+                href="/srhr-work"
+                style={{
+                  alignSelf: "center",
+                }}
+              >
+                <Button
+                  w="fit-content"
+                  borderRadius="20px"
+                  boxShadow="md"
+                  bottom={6}
+                  bg="brand.black"
+                  color="brand.white"
+                  _hover={{
+                    bg: "brand.red",
+                  }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Stack>
           ))}
         </SimpleGrid>

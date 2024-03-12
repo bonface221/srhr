@@ -7,10 +7,10 @@ import React from "react";
 const AboutUsPage = () => {
   return (
     <>
-      <CommonPageHero text="About Us" bgImg="/images/about-us-hero.jpg" />
+      <CommonPageHero text="About Us" bgImg="/images/about-us-hero.jpg" />{" "}
+      <VisionAndMission />
       <WhoWeAre />
       <AddedValue />
-      <VisionAndMission />
     </>
   );
 };

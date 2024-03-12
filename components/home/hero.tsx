@@ -1,12 +1,13 @@
 import {
+  Box,
   Button,
-  Flex,
   Grid,
   GridItem,
   Heading,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -25,7 +26,7 @@ const Hero = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        background: "rgba(33, 115, 41,0.5)",
+        background: "rgba(0, 0, 0, 0.5)",
         zIndex: 999,
       }}
     >
@@ -39,42 +40,35 @@ const Hero = () => {
         <GridItem
           gridRow={{ base: "4/7", sm: "5/7", md: "5/7", lg: "6/7" }}
           gridColumn={{ base: "1/9", sm: "2/8", md: "2/6", lg: "2/5" }}
+          bg="rgba(247, 77, 77,.5)"
+          p="1.3rem"
+          borderRadius="xl"
         >
-          <Stack
-            bg="rgba(255, 255, 255, 0.6)"
-            p="1.5rem"
-            borderTopColor="brand.main"
-            borderLeftColor="brand.red"
-            borderRightColor="brand.main"
-            borderBottomColor="brand.red"
-            borderWidth="10px"
-            maxW="xl"
-            gap={4}
-          >
-            <Heading as="h1">SRHR Alliance in Kenya</Heading>
-            <Text as="h3" fontWeight={500} fontSize="xl">
+          <Stack>
+            <Heading fontSize="4rem" color="brand.white">
+              KENYA SRHR ALLIANCE
+            </Heading>
+            <Text color="brand.white" fontSize="1.4rem" fontWeight="semibold">
               Working together to increase Access to Reproductive Health and
-              Rights.
+              Rights
             </Text>
-            <Flex gap={3}>
-              <Button
-                bg="brand.main"
-                color="brand.white"
-                border="2px solid var(--chakra-colors-brand-main)"
-              >
-                Our Priorities
-              </Button>
-              <Button
-                bg="transparent"
-                color="brand.red"
-                border="2px solid var(--chakra-colors-brand-red)"
-              >
-                Our Priorities
-              </Button>
-            </Flex>
           </Stack>
         </GridItem>
       </Grid>
+      <Box zIndex={999} pos="absolute" bottom={10} right={10}>
+        <Link href="srhr-priorities">
+          <Button
+            bg="brand.lightRed"
+            borderRadius="20px"
+            color="brand.white"
+            _hover={{
+              bg: "brand.lightRedHover",
+            }}
+          >
+            Our Priorities
+          </Button>
+        </Link>
+      </Box>
     </Stack>
   );
 };

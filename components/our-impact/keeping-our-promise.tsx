@@ -28,7 +28,7 @@ const KeepingOurPromise = () => {
           <Text fontSize="2xl" fontWeight={500}>
             Keeping Our Promise
           </Text>
-          <Heading fontWeight={600} fontSize="3.5rem">
+          <Heading fontWeight={600} fontSize={{ base: "2.5rem", md: "3.5rem" }}>
             Together, We Are Turning Tragedy Into Transformation
           </Heading>
         </Stack>

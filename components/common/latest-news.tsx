@@ -8,7 +8,7 @@ const LatestNews = () => {
     <Stack marginX={marginX} my="4rem">
       <MainHeading text="Latest Stories and News" />
       <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} mt="2rem">
-        {latestNewsData.map((d, i) => (
+        {latestNewsData.slice(0, 3).map((d, i) => (
           <BlogCard key={i} blog={d} />
         ))}
       </SimpleGrid>

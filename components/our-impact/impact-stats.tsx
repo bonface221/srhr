@@ -1,4 +1,4 @@
-import { marginX } from "@/utils/constants";
+import { impactData, marginX } from "@/utils/constants";
 import CommunityIcon from "@/utils/icons/CommunityIcon";
 import { Box, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 import React from "react";
@@ -18,15 +18,22 @@ const ImpactStats = () => {
       marginX={marginX}
       my="5rem"
     >
-      {[1, 2, 3, 4, 5, 6].map((item, i) => (
+      {impactData.map((item, i) => (
         <Stack
           key={i}
           border="1px solid var(--chakra-colors-brand-lightMain)"
           p={4}
+          _hover={{
+            boxShadow: "0 0 10px 0 var(--chakra-colors-brand-red)",
+          }}
         >
-          <Box color="brand.main" as={CommunityIcon} boxSize={20} />
-          <Heading fontWeight="semibold">
-            Over 2 million young people (10-24 years)
+          <Box
+            color="brand.main"
+            as={item.icon}
+            boxSize={{ base: 10, md: 20 }}
+          />
+          <Heading fontWeight="semibold" fontSize="lg">
+            {item.content}
           </Heading>
         </Stack>
       ))}

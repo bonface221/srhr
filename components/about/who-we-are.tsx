@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import React from "react";
 import MainHeading from "../common/main-heading";
+import Link from "next/link";
 
 const WhoWeAre = () => {
   return (
@@ -27,7 +28,7 @@ const WhoWeAre = () => {
             src="/about/about-srhr2.jpg"
             alt="About SRHR"
             width={500}
-            height={600}
+            height={700}
             style={{
               borderRadius: "10px",
               objectFit: "cover",
@@ -41,7 +42,7 @@ const WhoWeAre = () => {
           <Heading color="brand.main" fontSize="3xl">
             ABOUT THE SRHR ALLIANCE
           </Heading>
-          <Text>
+          <Text fontSize="lg">
             The Sexual Reproductive Health and Rights (SRHR) Alliance, commonly
             known as the SRHR Alliance, or the Alliance is a national coalition
             of nineteen (19) civil society organizations spread across the
@@ -52,9 +53,19 @@ const WhoWeAre = () => {
             Kenya.
           </Text>
           <Flex gap={3}>
-            <Button w="fit-content" bg="brand.main" color="brand.white">
-              Learn more
-            </Button>
+            <Link href="/who-we-are/more-about-srhr/">
+              <Button
+                w="fit-content"
+                bg="brand.main"
+                _hover={{
+                  bg: "brand.red",
+                }}
+                color="brand.white"
+              >
+                Learn more
+              </Button>
+            </Link>
+
             <Button w="fit-content" bg="brand.red" color="brand.white">
               Donate
             </Button>

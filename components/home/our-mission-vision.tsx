@@ -5,72 +5,95 @@ import {
   Heading,
   SimpleGrid,
   Stack,
+  StackDivider,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import MainHeading from "../common/main-heading";
 
-const ourMissionCardsData = [
+const misssionCards = [
   {
-    title: "Information",
-    description:
-      "The goal of the SRHR Alliance is to deliver SRHR information directly to young people, by making sure",
-    link: "/our-priorities",
+    label: "Vision",
+    description: `"Boost your product and service's credibility by adding testimonials from your clients. People love recommendations
+    so feedback from others who've tried it is invaluable."`,
+    by: "FRANKIE A.",
   },
   {
-    title: "Services",
-    description:
-      "Increasing access and quality of SRH Services is key for the alliance and through select partner organizations",
-    link: "/our-priorities",
-  },
-  {
-    title: "Enabling Environment",
-    description:
-      "After decades of efforts to improve adolescent sexual and reproductive health (SRH), it has become increasingly",
-    link: "/our-priorities",
-  },
-  {
-    title: "Youth Participation",
-    description:
-      "The SRHR Alliance aspires to have young people at the center and as leaders of our work. The participation of young people",
-    link: "/our-priorities",
+    label: "Mission",
+    description: `"Boost your product and service's credibility by adding testimonials from your clients. Feedback from others who've tried it is invaluable."`,
+    by: "EZRA S.",
   },
 ];
 
 const OurMission = () => {
   return (
-    <Box
-      bgImage="/our-mission-img.jpg"
+    <Stack
+      bgImage="/our-vision-bg.JPG"
+      py="4rem"
       bgSize="cover"
-      bgPos="50% 40%"
       bgRepeat="no-repeat"
+      bgPos={{ base: "10% 50%", sm: "50% 60%" }}
+      pos="relative"
+      minH="60vh"
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        background: "rgba(0, 0, 0, 0.8)",
+        zIndex: 999,
+      }}
     >
-      <Stack justify="center" minH="65vh" py="3rem" marginX={marginX}>
-        <MainHeading text="Our Mission & Vision" color="white" />
-        <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} mt="2rem">
-          {ourMissionCardsData.map((d, i) => (
-            <Stack
-              key={i}
-              border="1px solid var(--chakra-colors-brand-white)"
-              p="2rem 1rem"
-              align="center"
-              gap={4}
-              bg="rgba(33, 115, 41, 0.7)"
-            >
-              <Heading as="h3" fontSize="xl" color="brand.white">
-                {d.title}
+      <SimpleGrid
+        marginX={marginX}
+        zIndex={999}
+        columns={{ base: 1, md: 2 }}
+        spacing={6}
+        alignItems="center"
+      >
+        <Stack>
+          <Heading
+            color="#ffdede"
+            w="70%"
+            fontSize={{ base: "3.5rem", md: "5.5rem" }}
+            dropShadow="brand.red"
+            fontStyle="italic"
+            textShadow="0 5px 15px var(--chakra-colors-brand-red)"
+          >
+            OUR VISION AND MISSION
+          </Heading>
+        </Stack>
+        <Stack gap={4}>
+          {misssionCards.map((card, i) => (
+            <Stack key={i}>
+              <Heading
+                color="brand.white"
+                fontSize={{ base: "1.9rem", md: "3.5rem" }}
+              >
+                {card.label}
               </Heading>
-              <Text fontSize="lg" color="brand.white" textAlign="center">
-                {d.description}
+              <StackDivider bg="brand.red" h=".2rem" />
+              <Text
+                color="#ffdede"
+                fontSize={{ base: "lg", md: "2xl" }}
+                fontWeight="semibold"
+              >
+                {card.description}
               </Text>
-              <Button mt="auto" size="sm" bg="brand.red" color="brand.white">
-                Learn More {">"}
-              </Button>
+              <Text
+                color="#ffdede"
+                fontStyle="italic"
+                fontSize={{ base: "xl", md: "3xl" }}
+                fontWeight="semibold"
+              >
+                - {card.by}
+              </Text>
             </Stack>
           ))}
-        </SimpleGrid>
-      </Stack>
-    </Box>
+        </Stack>
+      </SimpleGrid>
+    </Stack>
   );
 };
 

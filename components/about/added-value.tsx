@@ -11,10 +11,11 @@ import {
 import Image from "next/image";
 import React from "react";
 import MainHeading from "../common/main-heading";
+import Link from "next/link";
 
 const AddedValue = () => {
   return (
-    <Box mt="4rem" marginX={marginX}>
+    <Box my="4rem" marginX={marginX}>
       <MainHeading text="Added Value By SRHR" />
       <SimpleGrid
         mt="2rem"
@@ -26,7 +27,7 @@ const AddedValue = () => {
           <Heading color="brand.main" fontSize="3xl">
             What Value have we added?
           </Heading>
-          <Text maxW="94%">
+          <Text maxW="94%" fontSize="lg">
             The Alliance provides a great platform and opportunity for National,
             Regional and International advocacy to influence the SRHR agenda
             given the greater voice that comes with numbers. It has offered
@@ -37,9 +38,19 @@ const AddedValue = () => {
             in fundraising.
           </Text>
           <Flex gap={3}>
-            <Button w="fit-content" bg="brand.main" color="brand.white">
-              Learn more
-            </Button>
+            <Link href="/who-we-are/more-about-value-added">
+              <Button
+                w="fit-content"
+                _hover={{
+                  bg: "brand.red",
+                }}
+                bg="brand.main"
+                color="brand.white"
+              >
+                Learn more
+              </Button>
+            </Link>
+
             <Button w="fit-content" bg="brand.red" color="brand.white">
               Donate
             </Button>
