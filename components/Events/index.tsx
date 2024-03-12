@@ -25,7 +25,7 @@ const EventsListing = () => {
         >
           <GridItem>
             <Image
-              src="/our-vision-bg.jpg"
+              src="/our-vision-bg.JPG"
               width={500}
               height={500}
               style={{
