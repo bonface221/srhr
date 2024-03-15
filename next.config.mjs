@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.srhralliance.or.ke",
       },
+      {
+        protocol: "https",
+        hostname: "cms.srhralliance.or.ke",
+      },
     ],
   },
 };

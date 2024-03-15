@@ -14,10 +14,3 @@ export interface Blog {
   content: string;
   thumbnail?: string;
 }
-
-export interface Programme {
-  title: string;
-  slug: string;
-  desc: string;
-  images: string[];
-}

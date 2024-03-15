@@ -1,15 +1,18 @@
 "use client";
 import { marginX } from "@/utils/constants";
-import { Programme } from "@/utils/types";
+
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // Default theme
 import "@splidejs/react-splide/css";
+import { Programme } from "@/lib/directus";
+import RenderContent from "../common/render-content";
+import { CMS_ASSETS_URL } from "@/config";
 
 const ProgrammeContent = ({ programme }: { programme: Programme }) => {
-  const { title, desc, images, slug } = programme;
+  const { title, content, slug, programme_images } = programme;
   return (
     <Stack marginX={marginX} my="4rem">
       <Heading as="h2" size="lg" mb="1.4rem">
@@ -25,10 +28,10 @@ const ProgrammeContent = ({ programme }: { programme: Programme }) => {
           }}
           aria-label="My Favorite Images"
         >
-          {images.map((imageUrl, i) => (
+          {programme_images.map((image, i) => (
             <SplideSlide key={i}>
               <Image
-                src={`/program-images/${imageUrl}`}
+                src={`${CMS_ASSETS_URL}/${image.directus_files_id}`}
                 width={1200}
                 height={500}
                 style={{
@@ -43,9 +46,7 @@ const ProgrammeContent = ({ programme }: { programme: Programme }) => {
           ))}
         </Splide>
       </Box>
-      <Text mt="1.4rem" fontSize="lg">
-        {desc}
-      </Text>
+      <RenderContent content={content} />
     </Stack>
   );
 };

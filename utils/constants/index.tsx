@@ -16,7 +16,7 @@ import {
 import LocationIcon from "../icons/LocationIcon";
 import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
-import { Blog, Partner, Programme } from "../types";
+import { Blog, Partner } from "../types";
 import { getNavPrograms } from "../functions";
 
 export const marginX = { base: "2%", sm: "5%", md: "10%" };
@@ -36,7 +36,7 @@ export const contactsData = [
   },
 ];
 
-export const programs: Programme[] = [
+export const programs = [
   {
     title: "GUSO",
     slug: "guso",
@@ -134,8 +134,37 @@ export const navData = [
     ],
   },
   {
-    label: "Programs",
-    subItems: getNavPrograms(),
+    label: "Programmes",
+    subItems: [
+      {
+        label: "GUSO",
+        link: "/programmes/get-up-speak-out-guso",
+      },
+      {
+        label: "AMPLIFYCHANGE",
+        link: "/programmes/amplify-change-network-grant-2015-2017-program",
+      },
+      {
+        label: "ASK",
+        link: "/programmes/access-services-and-knowledge-ask-2013-2015-program",
+      },
+      {
+        label: "UFBR",
+        link: "/programmes/unite-for-body-rights-ufbr-2010-2015-program",
+      },
+      {
+        label: "THEORY OF CHANGE",
+        link: "/programmes/theory-of-change",
+      },
+      {
+        label: "Right Here Right Now (RHRN)",
+        link: "/programmes/right-here-right-now-rhrn",
+      },
+      {
+        label: "Too Pressed To Wait",
+        link: "/programmes/too-pressed-to-wait",
+      },
+    ],
   },
   {
     label: "Info Hub",
