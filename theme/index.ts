@@ -12,6 +12,7 @@ const colors = {
     black: "#000000",
     white: "#FFFF",
     gray: "#F3F3F3",
+    brown: "#ffdede",
   },
 };
 

@@ -13,6 +13,7 @@ import CommunityIcon from "@/utils/icons/CommunityIcon";
 import DoctorIcon from "@/utils/icons/DoctorIcon";
 import { marginX } from "@/utils/constants";
 import Link from "next/link";
+import { AnimatedCounter } from "../common/animated-counter";
 
 const ourStatsData = [
   {
@@ -34,7 +35,7 @@ const ourStatsData = [
 
 const Stats = () => {
   return (
-    <Box bg="brand.main">
+    <Box bg="brand.lightMain">
       <Stack minH="65vh" marginX={marginX} justify="center" py="3rem">
         <MainHeading text="Our Impact" color="white" />
 
@@ -45,11 +46,17 @@ const Stats = () => {
               p="1.5rem"
               borderRadius="2xl"
               align="center"
-              bg="brand.lightMain"
+              bg="brand.red"
             >
-              <Box as={d.icon} boxSize="6rem" color="brand.white" />
-              <Heading as="h6" color="brand.white">
-                {d.stat}
+              <Box as={d.icon} boxSize="6rem" color="brand.brown" />
+              <Heading
+                as="h6"
+                fontSize="5xl"
+                color="brand.white"
+                fontFamily="monospace"
+              >
+                <AnimatedCounter from={0} to={d.stat} />
+                <Box as="span">+</Box>
               </Heading>
               <Text textAlign="center" color="brand.white">
                 {d.desc}
@@ -60,6 +67,7 @@ const Stats = () => {
         <Box alignSelf="center">
           <Link href="/who-we-are/our-impact">
             <Button
+              bg="brand.brown"
               w="fit-content"
               alignSelf="center"
               color="brand.red"

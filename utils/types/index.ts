@@ -14,3 +14,10 @@ export interface Blog {
   content: string;
   thumbnail?: string;
 }
+
+export interface Team {
+  name: string;
+  img: string;
+  role: string;
+  content: string;
+}

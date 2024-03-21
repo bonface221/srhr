@@ -47,21 +47,17 @@ const CoreValues = () => {
             key={i}
             border="2px solid var(--chakra-colors-brand-main)"
             gap={4}
-            padding="1rem"
+            padding="2rem 1rem"
+            align="center"
             _hover={{
               boxShadow: "0px 0px 10px 0px var(--chakra-colors-brand-red)",
               borderColor: "var(--chakra-colors-brand-red)",
             }}
           >
-            <Box as={value.icon} boxSize={10} color="brand.red" />
-            <Heading fontSize="xl" color="brand.main">
+            <Box as={value.icon} boxSize={16} color="brand.red" />
+            <Heading fontSize="2xl" color="brand.main" textAlign="center">
               {value.title}
             </Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              vehicula, libero non tincidunt tincidunt, magna libero fermentum
-              lectus, eu scelerisque purus elit sit amet ante.
-            </Text>
           </Stack>
         ))}
       </SimpleGrid>

@@ -38,14 +38,19 @@ const Hero = () => {
         marginX={{ base: "1rem", sm: 0 }}
       >
         <GridItem
-          gridRow={{ base: "4/7", sm: "5/7", md: "5/7", lg: "6/7" }}
+          gridRow={{ base: "3/7", sm: "4/7", md: "3/7", lg: "6/7" }}
           gridColumn={{ base: "1/9", sm: "2/8", md: "2/6", lg: "2/5" }}
           bg="rgba(247, 77, 77,.5)"
           p="1.3rem"
           borderRadius="xl"
+          display="flex"
+          alignItems="center"
         >
           <Stack>
-            <Heading fontSize="4rem" color="brand.white">
+            <Heading
+              fontSize={{ base: "2rem", md: "4rem" }}
+              color="brand.white"
+            >
               KENYA SRHR ALLIANCE
             </Heading>
             <Text color="brand.white" fontSize="1.4rem" fontWeight="semibold">

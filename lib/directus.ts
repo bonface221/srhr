@@ -10,8 +10,17 @@ export type Programme = {
   }[];
 };
 
+export type Partner = {
+  slug: string;
+  name: string;
+  image: string;
+  description: string;
+  link: string;
+};
+
 type Schema = {
   programmes: Programme[];
+  partners: Partner[];
 };
 
 const directus = createDirectus<Schema>(CMS_URL).with(

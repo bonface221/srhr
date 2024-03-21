@@ -1,14 +1,5 @@
-import React from "react";
 import { marginX } from "@/utils/constants";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import MainHeading from "../common/main-heading";
 
@@ -31,13 +22,13 @@ const OurGoal = () => {
             and rights in productive, equal and healthy societies.
           </Text>
 
-          <Button w="fit-content" bg="brand.red" color="brand.white">
+          {/* <Button w="fit-content" bg="brand.red" color="brand.white">
             Donate
-          </Button>
+          </Button> */}
         </Stack>
         <Box>
           <Image
-            src="/goal-img.jpg"
+            src="/who-we-are/our-goal.JPG"
             alt="About SRHR"
             width={500}
             height={600}

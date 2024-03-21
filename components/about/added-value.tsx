@@ -51,9 +51,9 @@ const AddedValue = () => {
               </Button>
             </Link>
 
-            <Button w="fit-content" bg="brand.red" color="brand.white">
+            {/* <Button w="fit-content" bg="brand.red" color="brand.white">
               Donate
-            </Button>
+            </Button> */}
           </Flex>
         </Stack>
         <Box>

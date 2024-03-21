@@ -12,7 +12,7 @@ import Image from "next/image";
 import React from "react";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 
-const OurPublications = () => {
+const OurResources = () => {
   return (
     <Stack marginX={marginX} my="4rem">
       <Heading as="h2" size="lg" mb="1.4rem">
@@ -65,4 +65,4 @@ const OurPublications = () => {
   );
 };
 
-export default OurPublications;
+export default OurResources;
