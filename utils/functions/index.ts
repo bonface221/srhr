@@ -1,13 +1,5 @@
-import {
-  latestNewsData,
-  partnersData,
-  programs,
-  whoWeAreMoreAbout,
-} from "../constants";
+import { latestNewsData, programs, whoWeAreMoreAbout } from "../constants";
 
-export function getPartnerBySlug(slug: string) {
-  return partnersData.find((d) => d.slug === slug);
-}
 export function getBlogBySlug(slug: string) {
   return latestNewsData.find((d) => d.slug === slug);
 }
