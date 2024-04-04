@@ -27,6 +27,8 @@
     "react-grid-gallery": "^1.0.1-alpha.0",
     "react-icons": "^5.0.1",
     "react-image-lightbox": "^5.1.4",
+    "react-player": "^2.15.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-youtube": "^10.1.0",
     "sass": "^1.71.1",
     "sharp": "^0.33.2"
