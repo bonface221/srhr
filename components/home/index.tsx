@@ -8,5 +8,6 @@ export { default as LatestNews } from "../common/latest-news";
 export { default as Stats } from "./stats";
 
 export const SRHRAllianceOnYoutube = dynamic(
-  () => import("./srhr-alliance-on-youtube")
+  () => import("./srhr-alliance-on-youtube"),
+  { ssr: false }
 );
