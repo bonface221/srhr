@@ -1,7 +1,6 @@
 import CommonPageHero from "@/components/common/common-page-hero";
 import ProgrammeContent from "@/components/programme";
-import directus from "@/lib/directus";
-import { readItem } from "@directus/sdk";
+import { CMS_URL } from "@/config";
 import { notFound } from "next/navigation";
 
 interface Props {
@@ -25,13 +24,25 @@ export default ProgramDetails;
 
 async function getProgrammeBySlug(slug: string) {
   try {
-    const programme = await directus.request(
-      readItem("programmes", slug, {
-        fields: ["*", "programme_images.directus_files_id"],
-      })
-    );
-    return programme;
+    const res = await fetch(getUrl(slug), {
+      cache: "no-cache",
+    });
+
+    const programme: {
+      data: Programme;
+    } = await res.json();
+
+    return programme.data;
   } catch (error) {
     notFound();
   }
+}
+
+function getUrl(slug: string) {
+  return (
+    CMS_URL +
+    "/items/programmes/" +
+    slug +
+    "/items/programmes?fields=*,programme_images.directus_files_id"
+  );
 }

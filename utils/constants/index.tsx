@@ -347,15 +347,7 @@ export const teamData: Team[] = [
     The Head of the Finance Department oversees all financial operations within the organization, ensuring transparency, accuracy, and compliance with regulatory standards. Their responsibilities include budget management, financial reporting, and strategic financial planning to support the organization's objectives. With a mandate to maintain fiscal health and optimize resource allocation, they play a crucial role in sustaining the organization's mission and impact. Under this office, we have accountants and finance officers who support the work done
     `,
   },
-  {
-    name: "Maureen Mukuhi",
-    img: "/our-team/finance-assistant.jpg",
-    role: "Finance Assistant",
-    content: `
-    Assistant of the Finance Department oversees all financial operations within the organization, ensuring transparency, accuracy, and compliance with regulatory standards. Their responsibilities include budget management, financial reporting, and strategic financial planning to support the organization's objectives. With a mandate to maintain fiscal health and optimize resource allocation, they play a crucial role in sustaining the organization's mission and impact. Under this office, we have accountants and finance officers who support the work done.
 
-    `,
-  },
   {
     name: "Ramwaka Nyadzuwa",
     img: "/our-team/communications-and-youth-engagement-officer.jpg",

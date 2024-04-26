@@ -1,16 +1,16 @@
 import CommonPageHero from "@/components/common/common-page-hero";
 import { PartnersDetailContent } from "@/components/partners";
-import directus from "@/lib/directus";
-import { readItem } from "@directus/sdk";
+import { CMS_URL } from "@/config";
 
 import { notFound } from "next/navigation";
-import React from "react";
 
 interface Props {
   params: {
     slug: string;
   };
 }
+
+const url = CMS_URL + "/items/partners/";
 
 const PartnersDetail = async ({ params: { slug } }: Props) => {
   const partner = await getPartnerBySlug(slug);
@@ -27,12 +27,14 @@ export default PartnersDetail;
 
 async function getPartnerBySlug(slug: string) {
   try {
-    const partners = await directus.request(
-      readItem("partners", slug, {
-        fields: ["slug", "name", "description", "link", "image"],
-      })
-    );
-    return partners;
+    const res = await fetch(url + slug, {
+      cache: "no-cache",
+    });
+    const partner: {
+      data: Partner;
+    } = await res.json();
+
+    return partner.data;
   } catch (error) {
     notFound();
   }

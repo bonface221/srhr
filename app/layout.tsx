@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: url,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
   keywords: [
     "SRHR",
