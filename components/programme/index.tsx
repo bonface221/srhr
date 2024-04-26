@@ -7,12 +7,11 @@ import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // Default theme
 import "@splidejs/react-splide/css";
-import { Programme } from "@/lib/directus";
 import RenderContent from "../common/render-content";
 import { CMS_ASSETS_URL } from "@/config";
 
 const ProgrammeContent = ({ programme }: { programme: Programme }) => {
-  const { title, content, slug, programme_images } = programme;
+  const { title, content, programme_images } = programme;
   return (
     <Stack marginX={marginX} my="4rem">
       <Heading as="h2" size="lg" mb="1.4rem">
