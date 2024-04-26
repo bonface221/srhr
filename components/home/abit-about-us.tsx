@@ -44,6 +44,7 @@ const ABitAboutUs = () => {
           <Text
             fontSize={{ base: "1.3rem", md: "1.8rem" }}
             fontWeight="semibold"
+            textAlign="justify"
           >
             <Box as="span" color="brand.red">
               The SRHR Alliance in Kenya

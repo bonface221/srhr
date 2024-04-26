@@ -18,7 +18,7 @@ import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import { Blog, Team } from "../types";
 
-export const marginX = { base: "2%", sm: "5%", md: "10%" };
+export const marginX = { base: "3%", sm: "5%", md: "10%" };
 
 export const contactsData = [
   {

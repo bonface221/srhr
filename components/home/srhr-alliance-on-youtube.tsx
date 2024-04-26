@@ -13,21 +13,6 @@ interface RenderItemOptions {
   isPrevious: boolean;
 }
 
-const youtubeVideos = [
-  {
-    title: "SRHR Alliance Kenya",
-    videoId: "-QmEu-JUOT0",
-  },
-  {
-    title: "SRHR Alliance Kenya",
-    videoId: "sIUXATYa4AI",
-  },
-  {
-    title: "SRHR Alliance Kenya",
-    videoId: "GwXTQ_rVkEU",
-  },
-];
-
 const SRHRAllianceOnYoutube = () => {
   const customRenderItem = (
     item: ReactNode,
@@ -80,6 +65,14 @@ const SRHRAllianceOnYoutube = () => {
           key="youtube-3"
           url="https://www.youtube.com/embed/GwXTQ_rVkEU"
         />
+        <YoutubeSlide
+          key="youtube-4"
+          url="https://www.youtube.com/embed/BVh-c1cGBq8"
+        />
+        <YoutubeSlide
+          key="youtube-5"
+          url="https://www.youtube.com/embed/vC0xP3CxVBU"
+        />
       </Carousel>
     </Stack>
   );
@@ -93,4 +86,4 @@ const YoutubeSlide = ({
 }: {
   url: string;
   isSelected?: boolean;
-}) => <ReactPlayer width="100%" url={url} playing={isSelected} />;
+}) => <ReactPlayer width="100%" height="70vh" url={url} playing={isSelected} />;

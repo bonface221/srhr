@@ -18,6 +18,13 @@ const colors = {
 
 export const theme = extendTheme(
   {
+    components: {
+      Text: {
+        baseStyle: {
+          textAlign: "justify",
+        },
+      },
+    },
     colors: colors,
   },
   withProse()

@@ -20,7 +20,9 @@ const PrioritiesComponent = () => {
 
             <Stack>
               <Heading color="#F74D4D">{d.label}</Heading>
-              <Text fontSize="lg">{d.content}</Text>
+              <Text fontSize="lg" textAlign="justify">
+                {d.content}
+              </Text>
             </Stack>
           </Flex>
           {i !== prioritiesData.length - 1 && (

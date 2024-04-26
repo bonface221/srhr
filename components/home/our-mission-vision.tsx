@@ -13,13 +13,12 @@ import React from "react";
 const misssionCards = [
   {
     label: "Vision",
-    description: `"Boost your product and service's credibility by adding testimonials from your clients. People love recommendations
-    so feedback from others who've tried it is invaluable."`,
+    description: `"Sexual Reproductive Health and Rights For All."`,
     by: "FRANKIE A.",
   },
   {
     label: "Mission",
-    description: `"Boost your product and service's credibility by adding testimonials from your clients. Feedback from others who've tried it is invaluable."`,
+    description: `"To harness strategic partnerships that promote sustainable realization of SRHR for young people, women and marginalized groups that contribute to empowerment and sustainability of communities."`,
     by: "EZRA S.",
   },
 ];
@@ -55,8 +54,8 @@ const OurMission = () => {
         <Stack>
           <Heading
             color="#ffdede"
-            w="70%"
-            fontSize={{ base: "3.5rem", md: "5.5rem" }}
+            w="80%"
+            fontSize={{ base: "3.5rem", md: "5.3rem" }}
             dropShadow="brand.red"
             fontStyle="italic"
             textShadow="0 5px 15px var(--chakra-colors-brand-red)"
