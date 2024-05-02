@@ -1,12 +1,13 @@
-import directus from "@/lib/directus";
 import { marginX } from "@/utils/constants";
 import { Box, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
-import { readItems } from "@directus/sdk";
+
+import { CMS_ASSETS_URL, CMS_URL } from "@/config";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MainHeading from "../common/main-heading";
-import { CMS_ASSETS_URL } from "@/config";
+
+const cmsUrl = CMS_URL + "/items/partners?fields=slug,name,image,link";
 
 const PartnersGrid = async () => {
   const partnersData = await getPartners();
@@ -70,13 +71,15 @@ export default PartnersGrid;
 
 async function getPartners() {
   try {
-    const partners = await directus.request(
-      readItems("partners", {
-        fields: ["slug", "name", "image"],
-      })
-    );
-    return partners;
+    const res = await fetch(cmsUrl, {
+      cache: "no-cache",
+    });
+    const partners: {
+      data: Partner[];
+    } = await res.json();
+    return partners.data;
   } catch (error) {
+    console.log(error);
     notFound();
   }
 }

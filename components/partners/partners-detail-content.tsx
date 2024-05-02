@@ -1,5 +1,4 @@
 import { CMS_ASSETS_URL } from "@/config";
-import { Partner } from "@/lib/directus";
 import { marginX } from "@/utils/constants";
 import { ArrowDown } from "@/utils/icons";
 import { Box, Heading, Stack } from "@chakra-ui/react";
@@ -37,7 +36,7 @@ const PartnersDetailContent = ({ partner }: { partner: Partner }) => {
           />
         </Heading>{" "}
       </Link>
-      <RenderContent content={description} />
+      <RenderContent content={description || ""} />
     </Stack>
   );
 };
