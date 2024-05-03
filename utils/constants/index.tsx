@@ -326,11 +326,11 @@ export const ourWorkData = [
 
 export const teamData: Team[] = [
   {
-    name: "Our  Executive Director",
+    name: "Judy Amina",
     img: "/our-team/executive-director.png",
     role: "Our  Executive Director",
     content:
-      "Our  Executive Director serves as the organization's primary leader, responsible for overseeing its day-to-day operations and strategic vision. They play a crucial role in liaising with stakeholders, advocating for SRHR issues, and ensuring the effective implementation of programs and initiatives. The mandate of the Executive Director is to advance the Alliance's mission of promoting sexual and reproductive health and rights globally, while also fostering collaboration among member organizations and driving impactful advocacy efforts.",
+      "Judy Amina is a young Kenyan woman passionate about the Sexual Reproductive Health and Rights (SRHR) of young people, women and marginalized groups. She has been pivotal in steering SRHR projects targeting the youth, women, and vulnerable populations in Kenya for close to 10 years. She has previously been part of implementation of a cross border project that was present in 7 different countries (Kenya, Uganda, Malawi, Ethiopia, Ghana, Pakistan and Indonesia) working towards creating an enabling environment for access to CSE, access and delivery of comprehensive reproductive health services and favorable policies for the achievement of SRHR for all people. Currently, Judy is the Executive Director for the Kenya Sexual and Reproductive Health and Rights Alliance (SRHR Alliance) in Kenya which works to ensure the fulfillment of SRHR for all with a specific focus on young people, women and vulnerable groups. Here she’s, responsible for overseeing the organization's day-to-day operations and strategic vision and advancing the Alliance's mission of promoting sexual and reproductive health and rights globally, while also fostering collaboration among member organizations and driving impactful advocacy efforts.",
   },
   {
     name: "Glory Kathambi",

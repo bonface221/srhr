@@ -27,3 +27,10 @@ interface Blog {
 interface Homepage {
   home_blogs: Blog[];
 }
+
+interface Team {
+  name: string;
+  position: string;
+  bio: string;
+  profile_pic: string;
+}

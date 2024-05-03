@@ -1,6 +1,7 @@
-import { Team } from "@/utils/types";
+import { CMS_ASSETS_URL } from "@/config";
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import RenderContent from "../common/render-content";
 
 interface Props {
   data: Team;
@@ -13,8 +14,8 @@ const TeamCard2 = ({ data }: Props) => {
       p={4}
       border="1px solid black"
       borderRadius="md"
+      h="fit-content"
       transition="all .3s ease-in-out"
-      textAlign="center"
       align="center"
       _hover={{
         boxShadow: "0 0 10px 0 #000000",
@@ -22,7 +23,7 @@ const TeamCard2 = ({ data }: Props) => {
     >
       <Box h="15rem">
         <Image
-          src={data.img}
+          src={`${CMS_ASSETS_URL}/${data.profile_pic}`}
           alt={data.name}
           width={200}
           height={200}
@@ -37,10 +38,12 @@ const TeamCard2 = ({ data }: Props) => {
       <Heading as="h3" fontSize="3xl">
         {data.name}
       </Heading>
-      <Box as="h5" fontSize="xl" fontWeight="semibold">
-        {data.role}
+      <Box as="h5" textAlign="center" fontSize="xl" fontWeight="semibold">
+        {data.position}
       </Box>
-      <Text>{data.content}</Text>
+      <Box textAlign="justify">
+        <RenderContent content={data.bio} />
+      </Box>
     </Stack>
   );
 };
