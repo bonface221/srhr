@@ -43,6 +43,6 @@ function getUrl(slug: string) {
     CMS_URL +
     "/items/programmes/" +
     slug +
-    "/items/programmes?fields=*,programme_images.directus_files_id"
+    "?fields=*,programme_images.directus_files_id"
   );
 }

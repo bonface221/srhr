@@ -1,11 +1,10 @@
 import BlogSection from "@/components/blogs/blog-section";
 import RecentPosts from "@/components/blogs/recent-posts";
 import CommonPageHero from "@/components/common/common-page-hero";
+import { CMS_URL } from "@/config";
 import { marginX } from "@/utils/constants";
-import { getBlogBySlug } from "@/utils/functions";
-import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
-import React from "react";
 
 interface Props {
   params: {
@@ -13,9 +12,9 @@ interface Props {
   };
 }
 
-const BlogDetails = ({ params: { slug } }: Props) => {
-  const blog = getBlogBySlug(slug);
-  if (!blog) return notFound();
+const BlogDetails = async ({ params: { slug } }: Props) => {
+  const blog = await getSingleBlog(slug);
+
   return (
     <>
       <CommonPageHero text={blog.title} bgImg="" />
@@ -38,3 +37,30 @@ const BlogDetails = ({ params: { slug } }: Props) => {
 };
 
 export default BlogDetails;
+
+async function getSingleBlog(slug: string) {
+  try {
+    const res = await fetch(getUrl(slug), {
+      cache: "no-cache",
+    });
+    const blog: {
+      data: Blog;
+    } = await res.json();
+
+    return blog.data;
+  } catch (error) {
+    notFound();
+  }
+}
+
+function getUrl(slug: string) {
+  return (
+    CMS_URL +
+    "/items" +
+    "/blogs" +
+    "/" +
+    slug +
+    "?fields=slug,title,thumbnail,excerpt,date_created,content" +
+    "&status=published"
+  );
+}

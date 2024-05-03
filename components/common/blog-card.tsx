@@ -1,5 +1,6 @@
+import { CMS_ASSETS_URL } from "@/config";
+import { friendlyTime } from "@/lib/friendly-time";
 import { CalendarIcon, UserIcon } from "@/utils/icons";
-import { Blog } from "@/utils/types";
 
 import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
@@ -10,12 +11,12 @@ interface Props {
 }
 
 const BlogCard = ({ blog }: Props) => {
-  const { title, slug, date, thumbnail } = blog;
+  const { title, slug, excerpt, date_created, thumbnail } = blog;
   return (
     <Stack bg="brand.white" borderRadius="xl" overflow="hidden" h="fit-content">
       <Box h="20rem">
         <Image
-          src={thumbnail || ""}
+          src={`${CMS_ASSETS_URL}/${thumbnail}`}
           alt={title}
           width={500}
           height={500}
@@ -30,18 +31,15 @@ const BlogCard = ({ blog }: Props) => {
         <Flex gap={2}>
           <Flex align="center" gap={1}>
             <Box as={UserIcon} color="brand.main" boxSize={5} />
-            <Text>By Jonson</Text>
+            <Text>By srhr</Text>
           </Flex>
           |
           <Flex gap={1} align="center">
             <Box as={CalendarIcon} boxSize={5} color="brand.main" />
-            <Text>December 7,2023</Text>
+            <Text>{friendlyTime(new Date(date_created))}</Text>
           </Flex>
         </Flex>
-        <Heading size="md">{title}</Heading>{" "}
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, magni!
-        </Text>
+        <Heading size="md">{title}</Heading> <Text>{excerpt}</Text>
         <Button
           w="fit-content"
           borderRadius="20px"

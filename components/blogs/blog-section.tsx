@@ -10,10 +10,12 @@ import {
 import { notFound } from "next/navigation";
 import { CiCalendar } from "react-icons/ci";
 import "./blog-detail.scss";
-import { Blog } from "@/utils/types";
+import { CMS_ASSETS_URL } from "@/config";
+import { friendlyTime } from "@/lib/friendly-time";
+import RenderContent from "../common/render-content";
 
 const BlogSection = async ({ blog }: { blog: Blog }) => {
-  const { thumbnail, title, content } = blog;
+  const { thumbnail, title, date_created, content } = blog;
 
   if (!blog) return notFound();
 
@@ -21,8 +23,8 @@ const BlogSection = async ({ blog }: { blog: Blog }) => {
     <Stack gap={5}>
       <Box h="440px" borderRadius="20px" overflow="hidden">
         <Image
-          src={thumbnail}
-          alt="blog image placeholder"
+          src={`${CMS_ASSETS_URL}/${thumbnail}`}
+          alt={title}
           w="100%"
           h="100%"
           objectFit="cover"
@@ -38,7 +40,7 @@ const BlogSection = async ({ blog }: { blog: Blog }) => {
             textTransform="uppercase"
             fontFamily='"Open Sans" san-serif'
           >
-            julius
+            by srhr
           </Heading>
         </Flex>
 
@@ -49,11 +51,13 @@ const BlogSection = async ({ blog }: { blog: Blog }) => {
               color: "var(--chakra-colors-brand-main)",
             }}
           />
-          <Text fontWeight="semibold">JANUARY 8, 2024</Text>
+          <Text fontWeight="semibold">
+            {friendlyTime(new Date(date_created))}
+          </Text>
         </Flex>
       </Flex>
-      <Heading mb="3rem">{title}</Heading>
-      <Box id="blog-content" dangerouslySetInnerHTML={{ __html: content }} />
+      <Heading>{title}</Heading>
+      <RenderContent content={content} />
     </Stack>
   );
 };
