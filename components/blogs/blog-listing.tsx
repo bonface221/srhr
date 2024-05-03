@@ -65,6 +65,8 @@ function getUrl() {
   return (
     CMS_URL +
     "/items/blogs?" +
-    "fields=slug,title,thumbnail,excerpt,date_created"
+    "fields=slug,title,thumbnail,excerpt,date_created" +
+    "&sort=-date_created" +
+    "&status=published"
   );
 }
