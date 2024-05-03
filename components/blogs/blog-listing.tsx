@@ -6,10 +6,10 @@ import { marginX } from "@/utils/constants";
 
 const BlogListing = async () => {
   const blogs = await getBlogs();
-  console.log(blogs);
+
   return (
     <Box marginX={marginX} my="4rem">
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} alignItems="center">
         {blogs?.map((d, i) => (
           <BlogCard key={i} blog={d} />
         ))}

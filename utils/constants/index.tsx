@@ -175,7 +175,7 @@ export const navData = [
     label: "News & Events",
     subItems: [
       {
-        label: "Blog",
+        label: "Blogs",
         link: "/blogs",
       },
       {

@@ -21,9 +21,10 @@ const BlogDetails = async ({ params: { slug } }: Props) => {
 
       <Grid
         gap={8}
-        gridTemplateColumns="auto 300px"
+        gridTemplateColumns={{ base: "1fr", md: "1fr 300px" }}
         marginX={marginX}
-        my="6rem"
+        mt={{ base: "1rem", md: "6rem" }}
+        mb="6rem"
       >
         <GridItem>
           <BlogSection blog={blog} />

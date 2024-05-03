@@ -39,7 +39,17 @@ const BlogCard = ({ blog }: Props) => {
             <Text>{friendlyTime(new Date(date_created))}</Text>
           </Flex>
         </Flex>
-        <Heading size="md">{title}</Heading> <Text>{excerpt}</Text>
+        <Link href={`/blogs/${slug}`}>
+          <Heading
+            _hover={{
+              color: "brand.red",
+            }}
+            size="md"
+          >
+            {title}
+          </Heading>
+        </Link>
+        <Text>{excerpt}</Text>
         <Button
           w="fit-content"
           borderRadius="20px"

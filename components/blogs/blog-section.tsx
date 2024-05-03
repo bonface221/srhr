@@ -21,7 +21,7 @@ const BlogSection = async ({ blog }: { blog: Blog }) => {
 
   return (
     <Stack gap={5}>
-      <Box h="440px" borderRadius="20px" overflow="hidden">
+      <Box h="500px" borderRadius="20px" overflow="hidden">
         <Image
           src={`${CMS_ASSETS_URL}/${thumbnail}`}
           alt={title}
