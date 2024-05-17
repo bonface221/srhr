@@ -1,19 +1,9 @@
-import { latestNewsData, programs, whoWeAreMoreAbout } from "../constants";
+import { latestNewsData, whoWeAreMoreAbout } from "../constants";
 
 export function getBlogBySlug(slug: string) {
   return latestNewsData.find((d) => d.slug === slug);
 }
-export function getProgrammeBySlug(slug: string) {
-  return programs.find((d) => d.slug === slug);
-}
 
 export function getWhoWeAreData(slug: string) {
   return whoWeAreMoreAbout.find((d) => d.slug === slug);
-}
-
-export function getNavPrograms(): { label: string; link: string }[] {
-  return programs.map((program) => ({
-    label: program.title.toLocaleUpperCase(),
-    link: `/programs/${program.slug}`,
-  }));
 }
