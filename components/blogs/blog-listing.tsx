@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import BlogCard from "../common/blog-card";
 
 import { CMS_URL } from "@/config";
@@ -9,6 +9,12 @@ const BlogListing = async () => {
 
   return (
     <Box marginX={marginX} my="4rem">
+      <Heading>
+        Our{" "}
+        <Box as="span" color="var(--chakra-colors-brand-red)">
+          Blogs
+        </Box>
+      </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} alignItems="center">
         {blogs?.map((d, i) => (
           <BlogCard key={i} blog={d} />

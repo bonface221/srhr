@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <NextTopLoader color="#336aea" />
+        <NextTopLoader color="var(--chakra-colors-brand-green)" />
         <Providers>
           <Navbar />
           <Box as="main" bg="rgba(33, 115, 41, 0.08)">

@@ -13,75 +13,26 @@ import {
   WomenIcon,
   YouthIcon,
 } from "@/utils/icons";
-import LocationIcon from "../icons/LocationIcon";
+import FacebookIcon from "../icons/FacebookIcon";
+import InstagramIcon from "../icons/InstagramIcon";
+import LinkedinIcon from "../icons/LinkedinIcon";
 import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
+import XIcon from "../icons/XIcon";
 import { Blog, Team } from "../types";
 
 export const marginX = { base: "3%", sm: "5%", md: "10%" };
 
 export const contactsData = [
   {
-    icon: LocationIcon,
-    text: "Southgate Residence, Plainsview, Likoni Road",
-  },
-  {
     icon: MailIcon,
     text: "info@srhralliance.or.ke",
+    link: "mailto:info@srhralliance.or.ke",
   },
   {
     icon: PhoneIcon,
     text: "+254-769478605",
-  },
-];
-
-export const programs = [
-  {
-    title: "GUSO",
-    slug: "guso",
-    desc: "Get Up Speak Out (GUSO) is a 5-year programme (2016-2020) funded by the Dutch Ministry of Foreign Affairs and is being implemented in 11 countries in Africa and Asia. The programme aims to improve the Sexual and Reproductive Health and Rights (SRHR) of young people (10-24 years) by ensuring that they have access to Comprehensive Sexuality Education (CSE), youth-friendly services, and safe and supportive environments.",
-    images: ["guso1.JPG", "guso2.jpg", "guso3.jpg", "guso4.JPG"],
-  },
-  {
-    title: "AMPLIFYCHANGE",
-    slug: "amplifychange",
-    desc: "AmplifyChange is a multi-donor challenge fund that aims to empower young people  to realize their sexual and reproductive health and rights. The fund is managed by MannionDaniels, in association with African Women’s Development Fund, and the Global Network of  People Living with HIV/AIDS.",
-    images: ["amplify1.JPG", "amplify2.jpg", "amplify3.jpg"],
-  },
-  {
-    title: "ASK",
-    slug: "ask",
-    desc: "Adolescents 360 (A360) is a four-year project funded by the Bill & Melinda Gates Foundation, which aims to increase the number of adolescents using modern contraception in Ethiopia, Nigeria and Tanzania.",
-    images: ["ask1.JPG", "ask2.JPG", "ask3.JPG"],
-  },
-  {
-    title: "UFBR",
-    slug: "ufbr",
-    desc: "Unite for Body Rights (UFBR) is a 5-year programme (2016-2020) funded by the Dutch Ministry of Foreign Affairs and is being implemented in 11 countries in Africa and Asia. The programme aims to improve the Sexual and Reproductive Health and Rights (SRHR) of young people (10-24 years) by ensuring that they have access to Comprehensive Sexuality Education (CSE), youth-friendly services, and safe and supportive environments.",
-    images: ["ufbr1.JPG", "ufbr2.JPG"],
-  },
-  {
-    title: "THEORY OF CHANGE",
-    slug: "theory-of-change",
-    desc: "The Theory of Change (ToC) is a management and evaluation tool that is used to promote social change. It is a comprehensive description and illustration of how and why a desired change is expected to happen in a particular context.",
-    images: ["theory-of-change1.jpg"],
-  },
-  {
-    title: "Right Here Right Now (RHRN)",
-    slug: "rhrn",
-    desc: `
-    The Kenya RHRN II programme is a 5 year programme implemented by a consortium of 7 partner organizations who are progressive, youth led or youth serving, working around SRHR and deploying innovative approaches in programming and advocacy. The program implements a robust human right based approach focusing on an innovative locally rooted, youth-led high impact, cost effective and sustainable programme underpinning its interventions around meaningful involvement of adolescents and young people particularly in informal settlements to improve the poor SRHR outcomes in Nairobi, Mombasa and Kisumu counties by 2025.
-    `,
-    images: ["rhrn1.JPG", "rhrn2.JPG", "rhrn3.JPG", "rhrn4.JPG", "rhrn5.JPG"],
-  },
-  {
-    title: "Too Pressed To Wait",
-    slug: "too-pressed-to-wait",
-    desc: `
-    The "Too Pressed to Wait" campaign is a compelling initiative that revolves around sexual and reproductive justice for young people, particularly focusing on the context of some of the communities we serve, Airbase in Nairobi Kamkunji, Mnazi mmoja in Mombasa and Alendu in Kisumu. It aims to address the multifaceted challenges surrounding SRHR in Kenya. It is a call to action against some of the injustice and arrogance from duty-bearers at every level asking that we can no longer bear the heavy weight and burden of sexual reproductive health and gender injustices. This campaign is bold and strategic to reach out to whoever needs to be told. At the Alliance, the campaign strategy aims to engage, educate, empower, and evaluate changes in public discourse at grassroot level and impact change reactions for people to act to realize the enabling environment for SRHR for all.
-
-    `,
-    images: ["tptw1.JPG", "tptw2.JPG", "tptw3.JPG", "tptw4.JPG"],
+    link: "tel:+254769478605",
   },
 ];
 
@@ -183,6 +134,29 @@ export const navData = [
         link: "/events",
       },
     ],
+  },
+];
+
+export const quickLinks = [
+  {
+    label: "Home",
+    link: "/",
+  },
+  {
+    label: "Who we are",
+    link: "/who-we-are/about-us",
+  },
+  {
+    label: "What we do",
+    link: "/srhr-priorities",
+  },
+  {
+    label: "Info Hub",
+    link: "/gallery",
+  },
+  {
+    label: "News & Events",
+    link: "/blogs",
   },
 ];
 
@@ -448,5 +422,28 @@ export const eventsData = [
     location: "",
     description: "",
     tags: ["Talks"],
+  },
+];
+
+export const socials = [
+  {
+    icon: FacebookIcon,
+    link: "https://www.facebook.com/KenyaSRHR/",
+    name: "Facebook",
+  },
+  {
+    icon: XIcon,
+    link: "https://twitter.com/KenyaSRHR",
+    name: "Twitter",
+  },
+  {
+    icon: InstagramIcon,
+    link: "https://www.instagram.com/KenyaSRHR",
+    name: "Instagram",
+  },
+  {
+    icon: LinkedinIcon,
+    link: "https://ke.linkedin.com/in/kenya-srhr-alliance-39b433117",
+    name: "Linkedin",
   },
 ];

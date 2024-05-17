@@ -1,16 +1,8 @@
-import { contactsData, marginX, navData } from "@/utils/constants";
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Input,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { contactsData, marginX, quickLinks, socials } from "@/utils/constants";
+import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
+import XTweet from "../common/tweet";
 
 const Footer = () => {
   return (
@@ -26,6 +18,7 @@ const Footer = () => {
         px="1rem"
       >
         <GridItem
+          height="fit-content"
           colSpan={{ base: 2, lg: "auto" }}
           display="flex"
           justifyContent={{ base: "center", sm: "normal" }}
@@ -41,76 +34,54 @@ const Footer = () => {
           <Heading as="h3" size="md">
             Quick Links
           </Heading>
-          {navData.map((item, i) => (
-            <Text key={i}>{item.label}</Text>
+          {quickLinks.map((item, i) => (
+            <Link href={item.link} key={i}>
+              <Text key={i}>{item.label}</Text>
+            </Link>
           ))}
         </GridItem>
         <GridItem display="flex" flexDir="column" gap={2}>
           <Heading as="h3" size="md">
             Socials
           </Heading>
-          <Text>Twitter</Text>
-          <Text>Youtube</Text>
-          <Text>Facebook</Text>
-        </GridItem>
-        <GridItem
-          display="flex"
-          flexDir="column"
-          gap={2}
-          colSpan={{ base: 2, lg: 2 }}
-        >
-          <Heading as="h3" size="md">
-            Contact Us
-          </Heading>
-          {contactsData.map((item, i) => (
-            <Flex key={i} align="center">
-              <Box as={item.icon} width={6} height={6} />
-              <Text ml="1rem">{item.text}</Text>
-            </Flex>
+          {socials.map((item, i) => (
+            <Link href={item.link} key={i} target="_blank">
+              <Flex key={i} align="center" gap={1}>
+                <Box as={item.icon} color="brand.white" cursor="pointer" />
+                <Text>{item.name}</Text>
+              </Flex>
+            </Link>
           ))}
         </GridItem>
         <GridItem
           display="flex"
           flexDir="column"
           gap={2}
-          colSpan={{ base: 2, lg: 2 }}
+          colSpan={{ base: 2, lg: 1 }}
         >
           <Heading as="h3" size="md">
-            Subscribe for updates
+            Contact Us
+          </Heading>
+          {contactsData.map((item, i) => (
+            <Link href={item.link} key={i} target="_blank">
+              <Flex align="center">
+                <Box as={item.icon} width={6} height={6} />
+                <Text ml="1rem">{item.text}</Text>
+              </Flex>
+            </Link>
+          ))}
+        </GridItem>
+        <GridItem
+          display="flex"
+          flexDir="column"
+          gap={2}
+          colSpan={{ base: 2, lg: 3 }}
+        >
+          <Heading as="h3" size="md">
+            SRHR on Twitter
           </Heading>
 
-          <Stack borderRadius="md" bg="rgba(112, 174, 118, 0.8)" p=".5rem">
-            <Input
-              variant="flushed"
-              placeholder="Name"
-              color="brand.black"
-              _placeholder={{
-                color: "brand.white",
-                opacity: 0.8,
-              }}
-            />
-            <Input
-              variant="flushed"
-              placeholder="Phone"
-              type="tel"
-              _placeholder={{
-                color: "brand.white",
-                opacity: 0.8,
-              }}
-            />
-            <Input
-              variant="flushed"
-              placeholder="name@domain.com"
-              _placeholder={{
-                color: "brand.white",
-                opacity: 0.8,
-              }}
-            />
-
-            <Button bg="brand.red" color="brand.white">
-              Subscribe
-            </Button>
-          </Stack>
+          <XTweet />
         </GridItem>
       </Grid>
     </Box>

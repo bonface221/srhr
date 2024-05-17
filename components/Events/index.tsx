@@ -15,6 +15,10 @@ import Image from "next/image";
 const EventsListing = () => {
   return (
     <Stack marginX={marginX} my="4rem" gap="4rem">
+      <Heading>
+        Upcoming{" "}
+        <span style={{ color: "var(--chakra-colors-brand-main)" }}>events</span>
+      </Heading>
       {[1, 2, 3, 4, 5].map((item) => (
         <Grid
           key={item}

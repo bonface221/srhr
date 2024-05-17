@@ -1,7 +1,13 @@
 "use client";
 import { marginX } from "@/utils/constants";
 import Image from "next/image";
-import { isValidElement, ReactElement, ReactNode, Fragment } from "react";
+import {
+  isValidElement,
+  ReactElement,
+  ReactNode,
+  Fragment,
+  useEffect,
+} from "react";
 import { Stack } from "@chakra-ui/react";
 import ReactPlayer from "react-player/youtube";
 import { Carousel } from "react-responsive-carousel";
@@ -86,4 +92,4 @@ const YoutubeSlide = ({
 }: {
   url: string;
   isSelected?: boolean;
-}) => <ReactPlayer width="100%" height="70vh" url={url} playing={isSelected} />;
+}) => <ReactPlayer width="100%" height="70vh" url={url} playing={false} />;

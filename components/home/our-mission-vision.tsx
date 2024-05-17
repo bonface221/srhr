@@ -1,25 +1,20 @@
 import { marginX } from "@/utils/constants";
 import {
-  Box,
-  Button,
   Heading,
   SimpleGrid,
   Stack,
   StackDivider,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 
 const misssionCards = [
   {
     label: "Vision",
     description: `"Sexual Reproductive Health and Rights For All."`,
-    by: "FRANKIE A.",
   },
   {
     label: "Mission",
     description: `"To harness strategic partnerships that promote sustainable realization of SRHR for young people, women and marginalized groups that contribute to empowerment and sustainability of communities."`,
-    by: "EZRA S.",
   },
 ];
 
@@ -79,14 +74,6 @@ const OurMission = () => {
                 fontWeight="semibold"
               >
                 {card.description}
-              </Text>
-              <Text
-                color="#ffdede"
-                fontStyle="italic"
-                fontSize={{ base: "xl", md: "3xl" }}
-                fontWeight="semibold"
-              >
-                - {card.by}
               </Text>
             </Stack>
           ))}

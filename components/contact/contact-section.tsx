@@ -1,14 +1,12 @@
-import { Box, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import MainHeading from "../common/main-heading";
 import { contactsData, marginX } from "@/utils/constants";
+import { Box, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import MainHeading from "../common/main-heading";
 import ContactForm from "./contact-form";
-import Map from "@/components/common/map";
+import Link from "next/link";
 
 const ContactSection = () => {
   return (
     <>
-      {" "}
       <Stack marginX={marginX} my="4rem">
         <MainHeading text="Get In Touch" />
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} mt="4rem">
@@ -21,18 +19,25 @@ const ContactSection = () => {
               been answered.
             </Text>
             {contactsData.map((item, i) => (
-              <Flex key={i} align="center" gap={2}>
-                <Box as={item.icon} color="brand.red" width={6} height={6} />
-                <Text fontSize="lg">{item.text}</Text>
-              </Flex>
+              <Link href={item.link} key={i}>
+                <Flex align="center" gap={2}>
+                  <Box as={item.icon} color="brand.red" width={6} height={6} />
+                  <Text
+                    fontSize="lg"
+                    fontWeight="semibold"
+                    _hover={{
+                      color: "brand.red",
+                    }}
+                  >
+                    {item.text}
+                  </Text>
+                </Flex>
+              </Link>
             ))}
           </Stack>
           <ContactForm />
         </SimpleGrid>
       </Stack>
-      <Box h="50vh">
-        <Map />
-      </Box>
     </>
   );
 };

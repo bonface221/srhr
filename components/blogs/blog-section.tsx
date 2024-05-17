@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
 import { CiCalendar } from "react-icons/ci";
-import "./blog-detail.scss";
 import { CMS_ASSETS_URL } from "@/config";
 import { friendlyTime } from "@/lib/friendly-time";
 import RenderContent from "../common/render-content";

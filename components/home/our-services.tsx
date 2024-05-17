@@ -26,7 +26,7 @@ const ourServicesData = [
 
 const OurServices = () => {
   return (
-    <Box py="6rem" bgRepeat="no-repeat" bg="#519372">
+    <Box py="6rem" bgRepeat="no-repeat" bg="brand.green">
       <Stack marginX={marginX}>
         <Heading textAlign="center" color="brand.white">
           OUR SERVICES
