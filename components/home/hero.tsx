@@ -20,7 +20,7 @@ const Hero = () => {
 
     sources: [
       {
-        src: "https://res.cloudinary.com/duzmcqimi/video/upload/c_fill,w_1920,h_920/v1714398683/srhr/SRHR_2_fjh3ry.mp4",
+        src: "https://res.cloudinary.com/duzmcqimi/video/upload/c_fill,w_1920,h_920/v1716282617/srhr/www.srhralliance.or.ke-heros-video_wdpbmb.mp4",
         type: "video/mp4",
       },
     ],
