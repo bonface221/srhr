@@ -1,9 +1,8 @@
-import { Box, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import MainHeading from "../common/main-heading";
+import { marginX } from "@/utils/constants";
 import MissionIcon from "@/utils/icons/MissionIcon";
 import VisionIcon from "@/utils/icons/VisionIcon";
-import { marginX } from "@/utils/constants";
+import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import MainHeading from "../common/main-heading";
 
 const data = [
   {
@@ -39,7 +38,7 @@ const VisionAndMission = () => {
           </Text>
         </Stack>
 
-        <Flex gap={4}>
+        <SimpleGrid columns={{ base: 1, sm: 2 }} gap={4}>
           {data.map((item, i) => (
             <Stack
               key={i}
@@ -55,7 +54,7 @@ const VisionAndMission = () => {
               <Text>{item.text}</Text>
             </Stack>
           ))}
-        </Flex>
+        </SimpleGrid>
       </SimpleGrid>
     </Stack>
   );

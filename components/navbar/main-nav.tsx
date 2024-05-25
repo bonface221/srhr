@@ -28,7 +28,7 @@ const MainNav = () => {
             display={{ base: "none", lg: "block" }}
             bg="brand.main"
             _hover={{
-              bg: "brand.dark",
+              bg: "brand.black",
             }}
             color="brand.white"
           >

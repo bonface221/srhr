@@ -1,18 +1,12 @@
 "use client";
 import { marginX } from "@/utils/constants";
-import Image from "next/image";
-import {
-  isValidElement,
-  ReactElement,
-  ReactNode,
-  Fragment,
-  useEffect,
-} from "react";
 import { Stack } from "@chakra-ui/react";
+import Image from "next/image";
+import { isValidElement, ReactElement, ReactNode } from "react";
 import ReactPlayer from "react-player/youtube";
 import { Carousel } from "react-responsive-carousel";
-import MainHeading from "../common/main-heading";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import MainHeading from "../common/main-heading";
 
 interface RenderItemOptions {
   isSelected: boolean;
