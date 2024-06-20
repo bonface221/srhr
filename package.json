@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.6.0",
     "@nikolovlazar/chakra-ui-prose": "^1.2.1",
     "@splidejs/react-splide": "^0.7.12",
     "@videojs/http-streaming": "3.10.0",
@@ -25,6 +26,7 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
     "react-grid-gallery": "^1.0.1-alpha.0",
+    "react-hook-form": "^7.52.0",
     "react-icons": "^5.0.1",
     "react-image-lightbox": "^5.1.4",
     "react-player": "^2.15.1",
@@ -34,7 +36,8 @@
     "sass": "^1.71.1",
     "sharp": "^0.33.2",
     "video.js": "8.12.0",
-    "videojs-contrib-quality-levels": "^4.1.0"
+    "videojs-contrib-quality-levels": "^4.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/dompurify": "^3",

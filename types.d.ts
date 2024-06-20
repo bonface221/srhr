@@ -34,3 +34,10 @@ interface Team {
   bio: string;
   profile_pic: string;
 }
+
+type FormResponse = {
+  status: number;
+  body: {
+    message: string;
+  };
+};

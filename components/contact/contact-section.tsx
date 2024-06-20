@@ -12,11 +12,12 @@ const ContactSection = () => {
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} mt="4rem">
           <Stack gap={6}>
             <Heading as="h2" color="brand.main">
-              Contact our support team to get a consultation
+              Contact our team
             </Heading>
             <Text fontSize="lg">
-              Visit our FAQ page first, to see if your questions have already
-              been answered.
+              If you have any questions or would like to get in touch, please
+              fill out the form and we will get back to you as soon as
+              possible.
             </Text>
             {contactsData.map((item, i) => (
               <Link href={item.link} key={i}>

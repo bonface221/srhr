@@ -10,17 +10,27 @@ import {
 
 const PrioritiesComponent = () => {
   return (
-    <Stack my="4rem" marginX={marginX} gap={8}>
+    <Stack my={{ base: "2rem", sm: "4rem" }} marginX={marginX} gap={8}>
       {prioritiesData.map((d, i) => (
         <Box key={i}>
-          <Flex gap={6} mb="2rem" align="center">
-            <Stack bg="#F74D4D" p={4} borderRadius="50%" h="fit-content">
+          <Flex
+            gap={6}
+            flexDir={{ base: "column", sm: "row" }}
+            mb="2rem"
+            align="center"
+          >
+            <Stack bg="#F74D4D" p={5} borderRadius="50%" h="fit-content">
               <Box as={d.icon} boxSize="4rem" color="brand.white" />
             </Stack>
 
             <Stack>
-              <Heading color="#F74D4D">{d.label}</Heading>
-              <Text fontSize="lg" textAlign="justify">
+              <Heading
+                color="#F74D4D"
+                textAlign={{ base: "center", sm: "left" }}
+              >
+                {d.label}
+              </Heading>
+              <Text fontSize="lg" fontWeight="semibold" textAlign="justify">
                 {d.content}
               </Text>
             </Stack>
