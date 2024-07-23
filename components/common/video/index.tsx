@@ -1,7 +1,8 @@
 "use client";
 
 import { Box } from "@chakra-ui/react";
-import React from "react";
+import { useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import videojs from "video.js";
 import type Player from "video.js/dist/types/player";
 
@@ -32,6 +33,8 @@ export const VideoJS = (props: Props) => {
   const videoRef = React.useRef<HTMLDivElement>(null);
   const playerRef = React.useRef<Player | null>(null);
   const { options, onReady } = props;
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   React.useEffect(() => {
     // Make sure Video.js player is only initialized once
@@ -58,7 +61,7 @@ export const VideoJS = (props: Props) => {
   }, [options, videoRef]);
 
   // Dispose the Video.js player when the functional component unmounts
-  React.useEffect(() => {
+  useEffect(() => {
     const player = playerRef.current;
     const handleVisibilityChange = () => {
       if (document.hidden) {
@@ -80,8 +83,17 @@ export const VideoJS = (props: Props) => {
     };
   }, [playerRef]);
 
+  //pause the player if not in view
+  useEffect(() => {
+    if (isInView) {
+      playerRef.current?.play();
+    } else {
+      playerRef.current?.pause();
+    }
+  }, [isInView]);
+
   return (
-    <div data-vjs-player>
+    <div data-vjs-player ref={ref}>
       <Box ref={videoRef} />
     </div>
   );

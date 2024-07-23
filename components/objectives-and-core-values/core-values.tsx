@@ -1,13 +1,11 @@
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import MainHeading from "../common/main-heading";
-import Image from "next/image";
-import HandsIcon from "@/utils/icons/HandsIcon";
-import RespectIcon from "@/utils/icons/RespectIcon";
-import HumanRights from "@/utils/icons/HumanRights";
-import CommitIcon from "@/utils/icons/CommitIcon";
-import LawIcon from "@/utils/icons/LawIcon";
 import { marginX } from "@/utils/constants";
+import CommitIcon from "@/utils/icons/CommitIcon";
+import HandsIcon from "@/utils/icons/HandsIcon";
+import HumanRights from "@/utils/icons/HumanRights";
+import LawIcon from "@/utils/icons/LawIcon";
+import RespectIcon from "@/utils/icons/RespectIcon";
+import { Box, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
+import MainHeading from "../common/main-heading";
 
 const coreValues = [
   {

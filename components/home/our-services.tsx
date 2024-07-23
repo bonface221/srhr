@@ -31,7 +31,7 @@ const OurServices = () => {
         <Heading textAlign="center" color="brand.white">
           OUR SERVICES
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} mt="2rem">
+        <SimpleGrid columns={{ base: 1, md: 4 }} gap={8} my="2rem">
           {ourServicesData.map((d, i) => (
             <Stack key={i} gap={8}>
               <Box
@@ -63,33 +63,37 @@ const OurServices = () => {
                   transform="translate(-50%,0)"
                   bg="brand.white"
                   color="brand.red"
+                  _hover={{
+                    bg: "brand.red",
+                    color: "brand.white",
+                  }}
                 >
                   {d.title}
                 </Button>
               </Box>
-              <Link
-                href="/srhr-work"
-                style={{
-                  alignSelf: "center",
-                }}
-              >
-                <Button
-                  w="fit-content"
-                  borderRadius="20px"
-                  boxShadow="md"
-                  bottom={6}
-                  bg="brand.black"
-                  color="brand.white"
-                  _hover={{
-                    bg: "brand.red",
-                  }}
-                >
-                  Learn More
-                </Button>
-              </Link>
             </Stack>
           ))}
         </SimpleGrid>
+        <Link
+          href="/srhr-work"
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Button
+            w="fit-content"
+            borderRadius="20px"
+            boxShadow="md"
+            bottom={6}
+            bg="brand.black"
+            color="brand.white"
+            _hover={{
+              bg: "brand.red",
+            }}
+          >
+            Learn More
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );
